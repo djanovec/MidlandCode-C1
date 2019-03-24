@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tables and Forms</title>
+    <link rel="stylesheet" type="text/css" href="../../05-10-18/Lesson/formstyles.css">
+</head>
+<body>
+<nav>
+    <div class="link center"><a href="#tables">Tables</a></div>
+    <div class="link center"><a href="#forms">Forms</a></div>
+    <div class="link center"><a href="#extras">Extras</a></div>
+    <hr>
+</nav>
+
+<header class="container topContainer">
+    <h2 class="center">And now we're going to go over the important form and table sections with some extra things as
+        well!</h2>
+</header>
+
+<noscript>
+    <div class="container">
+        <h1 class="center">This site uses JavaScript. To access full functionality please whitelist this site or turn on JavaScript</h1>
+    </div>
+</noscript>
+<section class="container" id="tables">
+    <header>
+        <h2 class="center">Tables: An introduction in 4 parts</h2>
+    </header>
+    <article>
+        <p class="center">So for a basic overview we're going to put all the information we've got on the.. uhh counter.
+            Basic tables in HTML look like this:</p>
+        <table class="noStyle">
+            <!--FOR Full accessibility you should use lang attributes-->
+            <caption>Super basic standard table</caption>
+            <tr>
+                <th>Position</th>
+                <th>Player</th>
+                <th>Club</th>
+            </tr>
+            <tr>
+                <td>GK</td>
+                <td>Ivan Vargić</td>
+                <td>Rijeka</td>
+            </tr>
+            <tr>
+                <td>DF</td>
+                <td>Šime Vrsaljko</td>
+                <td>Sassuolo</td>
+            </tr>
+            <tr>
+                <td>DF</td>
+                <td>Ivan Strinić</td>
+                <td>Napoli</td>
+            </tr>
+            <tr>
+                <td>MF</td>
+                <td>Ivan Perišić</td>
+                <td>Internazionale</td>
+            </tr>
+            <tr>
+                <td>DF</td>
+                <td>Vedran Ćorluka</td>
+                <td>Lokomotiv Moscow</td>
+            </tr>
+            <tr>
+                <td>DF</td>
+                <td>Tin Jedvaj</td>
+                <td>Bayer Leverkusen</td>
+            </tr>
+            <tr>
+                <td>MF</td>
+                <td>Ivan Rakitić</td>
+                <td>Barcelona</td>
+            </tr>
+
+        </table>
+    </article>
+    <article>
+        <p class="center">You could also have a horizontal table if you prefer</>
+        <table>
+            <caption>Like this!</caption>
+            <tr>
+                <th>Name:</th>
+                <td>Mike Truax</td>
+            </tr>
+            <tr>
+                <th>Contact:</th>
+                <td>555-123-4567</td>
+            </tr>
+        </table>
+    </article>
+    <article>
+        <p class="center">What happens if you need a cell to be blank?</>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>State</th>
+            </tr>
+            <tr>
+                <td>Rembrandt</td>
+                <td>Leiden</td>
+                <td>Dutch Republic</td>
+            </tr>
+            <!--Insert a blank td -->
+            <tr>
+                <td>James Ensor</td>
+                <td></td>
+                <td>Belgium</td>
+            </tr>
+            <!--Otherwise this happens:-->
+            <tr>
+                <td>Utagawa Kuniyoshi</td>
+                <td>Japan</td>
+            </tr>
+        </table>
+    </article>
+    <article>
+        <p class="center"> Table rows can span multiple columns or rows with the colspan or rowspan attribute</>
+        <table>
+            <caption>Spanning multiple Columns</caption>
+            <tr>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+            <tr>
+                <td colspan="5">Work</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="3">Class</td>
+                <td></td>
+            </tr>
+        </table>
+        <br><br>
+        <table>
+            <caption>Spanning multiple Rows</caption>
+            <tr>
+                <th>Name</th>
+                <td>Mike Truax</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Contact Info</th>
+                <td>555-123-4567</td>
+            </tr>
+            <tr>
+                <td>example@email.com</td>
+
+            </tr>
+        </table>
+
+    </article>
+    
+
+</section>
+
+
+<section class="container" id="forms">
+    <header>
+        <h2 class="center">What if you need forms someone can fill out?</h2>
+    </header>
+    <article>
+        <p class="center">Basic Forms can be done with method=post or get (or later JS functions) and action=url or
+            with onsubmit and js function. Below is a normal login with a secret!
+        </p>
+        <form action="randomwebsite.website" method="post" id="firstForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Username">
+                <label for="username">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <p for="hiddeninput">That's all there is right?</p>
+                <input type="hidden" id="hiddeninput" name="hiddeninput" value="Super Secret">
+                <input type="submit" value="Submit form" onclick="logMeIn">
+        </form>
+    </article>
+    <article>
+        <p> Ok so normal forms are all well and good but what else can we do? Fieldsets are great for collecting similar info</p>
+        <form id="secondForm">
+            <fieldset>
+                <legend>Basic Info</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone">
+            </fieldset>
+            <p> You can use Radios for selecting only one option</p>
+            <fieldset>
+                <legend>Favorite Music Genre:</legend>
+                    <input type="radio" id="musicChoice1"
+                           name="music" value="norteno">
+                    <label for="musicChoice1">Norteño</label>
+
+                    <input type="radio" id="musicChoice2"
+                           name="music" value="Zydeco">
+                    <label for="musicChoice2">Zydeco</label>
+
+                    <input type="radio" id="musicChoice3" checked="checked"
+                           name="music" value="throatsinging" >
+                    <label for="musicChoice3">Mongolian Throat Singing</label>
+            </fieldset>
+            <p> You can use Checkboxes for selecting only multiple option</p>
+            <fieldset>
+                <legend>Favorite Foods:</legend>
+                <input type="checkbox" id="foodChoice1"
+                       name="food" value="curry" checked="checked">
+                <label for="foodChoice1">Curry</label>
+
+                <input type="checkbox" id="foodChoice2"
+                       name="food" value="icecream">
+                <label for="foodChoice2">Ice Cream</label>
+
+                <input type="checkbox" id="foodChoice3"
+                       name="food" value="pizza" checked="checked">
+                <label for="foodChoice3">Pizza</label>
+            </fieldset>
+
+            <p>Select Boxes allow for multiple options in a dropdown format</p>
+            <label for="favoriteCar">Favorite Car</label>
+            <select name="favoriteCar" id="favoriteCar">
+                <optgroup label="Foreign">
+                <option value="Yugo">Yugo</option>
+                <option value="Datsun">Datsun</option>
+                </optgroup>
+                <optgroup label="Domestic">
+                    <option value="Pinto" selected>Pinto</option>
+                    <option value="Nova">Nova</option>
+                </optgroup>
+            </select>
+
+            <p>Adding a multiple tag to select Boxes allow for multiple choices to be selected</p>
+            <label for="favoriteCar2">Favorite Car</label>
+            <select name="favoriteCar2" id="favoriteCar2" multiple>
+
+                <option value="Yugo">Yugo</option>
+                <option value="Datsun">Datsun</option>
+
+
+                <option value="Pinto" selected>Pinto</option>
+                <option value="none">None of the above</option>
+            </select>
+            <p> Buttons can be added to also allow for custom functionality via JS such as form clearing</p>
+            <button onclick="document.getElementById('secondForm').reset()">Clear Form</button>
+
+            <p>Text area inputs allow for A TON of text:</p>
+            <label for="textarea">Your life story</label>
+            <textarea id="textarea" class="container" style="height: 100px"></textarea>
+            <p>HTML5 also introduced a bunch of new inputs as well but make sure you check cross browser compatibility:</p>
+
+            <label for="html5-2">Date</label>
+            <input type="date" id="html5-2"><br><br>
+
+                <label for="html5-3">Color</label>
+                <input type="color" id="html5-3"><br><br>
+
+                <label for="html5-4">File</label>
+                <input type="file" id="html5-4"><br><br>
+
+                <label for="html5-5">Search</label>
+                <input type="search" id="html5-5"><br><br>
+
+
+                <input type="submit" value="SUBMIT">
+
+        </form>
+    </article>
+</section>
+</body>
+</html>

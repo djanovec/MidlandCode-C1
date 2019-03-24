@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Basic description of the page useful for search engine occasionally included with results-->
+    <meta name="description" content="An introduction to HTML and what it's basic structure.">
+
+    <!--Whether engines should add this to a page or not (nofollow is this page but no links, noindex means it shouldn't be-->
+    <!--added at all-->
+    <meta name="robots" content="nofollow">
+
+    <!--Author of the page-->
+    <meta name="author" content="Mike Truax">
+
+    <!--How often it should refresh-->
+    <!--<meta http-equiv="refresh" content="1;url=http://www.miketruax.com">-->
+
+    <!--The title is what displays at the top of the browser-->
+    <title>Intro To HTML: It's not too bad...</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style> #babyBearPic{ cursor: pointer }</style>
+</head>
+<body>
+
+<header class="camelCase snake_case kebab-case container" id="uniqueId">
+    <p class="center">The Header tag is useful for intro content in the whole document or as a header for a section
+        h1-6 tags are used as headers and are block elements</p>
+    <h1 class="center">This is an h1 header</h1>
+    <h2 class="center">This is an h2 header</h2>
+    <h3 class="center">This is an h3 header</h3>
+    <h4 class="center">This is an h4 header</h4>
+    <h5 class="center">This is an h5 header</h5>
+    <h6 class="center">This is an h6 header</h6>
+
+</header>
+<hr>
+<nav class="navigation">
+    <div class="link center">
+        <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" title="Same Window"> Mozilla HTML</a>
+    </div>
+    <div class="link center">
+        <a href="http://www.codecademy.com" target="_blank" title="New Window">CodeCademy</a>
+    </div>
+    <div class="link center">
+        <a href="#cuteBear" title="In Page Anchor">Bear Picture</a>
+    </div>
+</nav>
+<hr>
+
+<section class="container">
+    <p>So you can see all sorts of uses for different tags and there are many more you can use as well</p>
+    <p>Some of them are block elements such as the p tag this and the previous sentence are contained in.
+        while others <span class="redText">are inline elements such as this span in red</span>,
+        <span class="blueText">or this span in blue.</span>
+    </p>
+</section>
+<hr>
+<article class="container">
+    <header>
+        <h3  class="center">Goals for today</h3>
+    </header>
+    This is an article tag, one of the semantic additions to HTML5 which can be used or not but can add easier code
+    reading.
+    Ideally after today you should be able to build rudimentary webpages with no styling. It's not much now but you're
+    gonna get there I promise!
+</article>
+<hr>
+<section class="container">
+    <header>
+        <h3  class="center">Lists allow for you to be able to show information in a highly legible format.</h3>
+    </header>
+    <article>
+        The ordered list allows for you to show items in a numbered pattern:
+        <ol>
+            <li>First item in a list</li>
+            <li>Second item in a list</li>
+            <li>Third item in a list</li>
+            <li>Fourth item in a list</li>
+        </ol>
+    </article>
+    <article>
+        The unordered list allows for you to show items with a simple bullet point next to them:
+        <ul>
+            <li>First item in a list</li>
+            <li>Second item in a list</li>
+            <li>Third item in a list</li>
+            <li>Fourth item in a list</li>
+        </ul>
+    </article>
+    <article>
+        The descriptive list allows for even more functionality
+        <dl>
+            <dt>Drinks I like</dt>
+            <dd>Coffee</dd>
+            <dd>Whisky</dd>
+            <dt>Food I like</dt>
+            <dd>Pizza</dd>
+            <dd>Anything breakfast related</dd>
+        </dl>
+    </article>
+    <article>
+        You can even nest lists!
+        <ol>
+            <li>
+                <ul>
+                    <li>Like</li>
+                    <li>This</li>
+                </ul>
+            </li>
+            <li>
+                <ol>
+                    <li>Or</li>
+                    <li>This</li>
+                </ol>
+            </li>
+        </ol>
+    </article>
+</section>
+<hr>
+<section class="container">
+    <header>
+        <h3 class="center">
+            There are some tags that allow for some styling options without using CSS
+        </h3>
+    </header>
+    <p>In this paragraph you'll see some of the options. You can use <b> a b tag for bold text</b>,
+        <em>the em tag for things you want to put emphasis on</em>, or <strong> strong for increased emphasis
+        </strong> of course, these are <sup>only</sup> <sub>a few</sub> of the ones available.</p>
+    <p>If you want extra line breaks between lines of text you can add a couple br tags. Like <br><br> this!</p>
+</section>
+<hr>
+<section class="container" id="cuteBear">
+    <header>
+        <h3 class="center">But what web page wouldn't be complete without images!?!?</h3>
+    </header>
+    <figure>
+        <img src="http://www.cutestpaw.com/wp-content/uploads/2015/01/Baby-Bear-Cub.jpg" title="Cute Baby Bear"
+         alt="Baby Bear Picture" id="babyBearPic"/>
+        <figcaption class="center">Oh hai thar friends!</figcaption>
+    </figure>
+</section>
+
+
+<footer class="container">
+    <hr>
+    Hr tags are nice easy lines to separate content especially like this footer here!
+    <p>Contact me here: <a href="mailto:user@email.com" title="My E-mail">user@email.com</a></p>
+</footer>
+
+<script>
+    var bear= document.getElementById('babyBearPic');
+    var numClicked = 0;
+    function bearClick(){
+        numClicked++;
+        console.log("You've clicked the baby bear "+numClicked+" times");
+        numClicked > 1 ? '' : alert('RAWR I\'m a baby bear!!');
+    }
+    bear.addEventListener('click', bearClick);
+</script>
+</body>
+</html>
