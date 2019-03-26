@@ -1,0 +1,87 @@
+<!-- Below is an example of improper use of DRY Practices, taking what you know, fix the CSS AND the HTML to follow DRY practices-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DRY CSS</title>
+    <style>
+        *{
+            color: white;
+        }
+        div{
+            text-align: center;
+            
+            margin: 5px;
+            display: inline-block;
+        }
+
+        div:nth-child(1n+6){  /*6 and up */
+            width: 150px;
+            height: 150px;
+            background-color: #0088FF;
+            line-height: 150px;
+        }
+        div:nth-child(-1n+5){ /* 5 and below*/
+            height: 200px;
+            width: 200px;
+            background-color: #FFa500;
+            line-height: 200px;    
+        }
+
+        div:nth-child(2), div:nth-child(3), div:nth-child(6), div:nth-child(7), div:nth-child(8){ /* 2,3,6,7,8*/
+            border-color: black;
+        }
+
+        div:nth-child(4), div:nth-child(5){ /* 4th and 5th*/
+            border-color: red;
+        }
+
+        div:nth-child(n+2):nth-child(-n+8){
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        div:nth-child(n+4):nth-child(-n+8){
+            border-radius: 10px;
+        }
+
+        div:nth-child(1n+9), h3:last-child{ /*9+*/
+            text-align: right !important;
+        }
+
+        h3:first-child{ /*first h3*/
+            background-color: #FFa500;
+            text-align: center;
+        }
+
+        h3:last-child{ /* last h3*/
+            background-color: #0088FF;
+        }
+
+
+/* 
+   text-align: center;
+   
+   border-radius: 10px;
+   border: ?
+ */
+
+    </style>
+</head>
+<body>
+<h3>DRY CSS</h3>
+<div>Div 1</div>
+<div>Div 2</div>
+<div>Div 3</div>
+<div>Div 4</div>
+<div>Div 5</div>
+<div>Div 6</div>
+<div>Div 7</div>
+<div>Div 8</div>
+<div>Div 9</div>
+<div>Div 10</div>
+<h3>What can we fix?</h3>
+</body>
+</html>

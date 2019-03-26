@@ -25,6 +25,27 @@
         /*:not(:nth-child()) 1x*/
         /*:hover 1x*/
 
+        /* SOLUTION */
+        .box:first-child{
+            background-color: red;
+        }
+        .box:last-child{
+            background-color: green;
+        }
+        .box:nth-child(7n+2){
+            background-color: blue;
+        }
+       .box:nth-child(n+3):nth-child(-n+8){
+           background-color: orange;
+       }
+       .box:not(:nth-child(6)){
+           color: white;
+       }
+       .box:hover{
+           box-shadow: 3px 3px green;
+       }
+
+
     </style>
 </head>
 <body>

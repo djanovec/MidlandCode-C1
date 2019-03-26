@@ -7,7 +7,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-    td, th{
+    td:not(.firstCell), th{
         border: 1px solid black;
     }
     </style>
@@ -16,7 +16,7 @@
 <body>
     <table>
         <tr>
-            <td></td>
+            <td class="firstCell"></td>
             <th>Monday</th>
             <th>Tuesday</th>
             <th>Wednesday</th>
