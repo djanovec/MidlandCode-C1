@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gotta get me my Floats and Clears</title>
+    <style>
+        .right{
+            float: right;
+        }
+        .left{
+            float: left;
+        }
+        div:not(.container){
+            margin: auto;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            background-color: #0000FF;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+        }
+
+        .inline-block{
+            display: inline-block;
+        }
+        .clearRight{
+            clear:right;
+        }
+        .clearLeft{
+            clear: left;
+        }
+
+        .clearRight, .clearLeft{
+            background-color: red;
+        }
+        h1{
+            text-align: center;
+        }
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .container{
+            width: 100%;
+        }
+        .clearBoth{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<h1>Non-floated Normal Divs</h1>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+<h1>Non-floated Inline-block Divs</h1>
+<div class="inline-block"></div>
+<div class="inline-block"></div>
+<div class="inline-block"></div>
+<div class="inline-block"></div>
+
+<div class="clearfix container">
+<h1>Floated Divs</h1>
+<div class="left">1</div>
+<div class="right">2</div>
+<div class="left">3</div>
+<div class="right">4</div>
+<div class="left">5</div>
+<div class="right">6</div>
+<div class="left">7</div>
+</div>
+
+<div class="clearfix container">
+<h1>Cleared Divs</h1>
+<div class="right clearRight">1</div>
+<div class="left clearLeft">2</div>
+<div class="right clearRight">3</div>
+<div class="left clearLeft">4</div>
+<div class="right clearRight">5</div>
+<div class="left clearLeft">6</div>
+<p style="text-align: center">THIS IS A P TAG BETWEEN SIX FLOATING DIVS</p>
+    <div class="right clearBoth">1</div>
+<div class="left clearBoth">2</div>
+<div class="right clearBoth">3</div>
+<div class="left clearBoth">4</div>
+<div class="right clearBoth">5</div>
+<div class="left clearBoth">6</div>
+</div>
+
+
+</body>
+</html>
