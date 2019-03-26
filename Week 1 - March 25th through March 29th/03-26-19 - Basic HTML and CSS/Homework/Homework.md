@@ -9,4 +9,4 @@
 
 
 ### Psuedo-class and Combinators Homework
-* Finish any of the in class work witth Psuedo-classes and Combinators
+* Finish any of the in class work witth Psuedo-classes and Combinators.
