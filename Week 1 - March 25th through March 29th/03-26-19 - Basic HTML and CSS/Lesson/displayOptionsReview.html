@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DisplayOptions</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #0000FF;
+            color: white;
+            margin: 2px auto;
+        }
+        button{
+            margin: 0;
+            width: 24%;
+        }
+    </style>
+    <script>
+        function changeStyle(val){
+            var divs = document.getElementsByTagName('div');
+            for(var i=0; i<divs.length; i++){
+            divs[i].style.display = val;
+            }
+        }
+    </script>
+</head>
+<body>
+<button  onclick="changeStyle('inline');">Inline</button>
+<button  onclick="changeStyle('inline-block');">Inline-block</button>
+<button  onclick="changeStyle('Block');">Block</button>
+<button  onclick="changeStyle('None');">None</button><br>
+<div>
+    This is a div
+</div>
+<div>
+    This is a div
+</div>
+<div>
+    This is a div
+</div>
+<div>
+    This is a div
+</div>
+<div>
+    This is a div
+</div>
+<div>
+    This is a div
+</div>
+<div>
+    This is a div
+</div>
+<div>
+    This is a div
+</div>
+<div>
+    This is a div
+</div>
+<hr>
+<p>
+    This is the end of the page!
+</p>
+
+</body>
+</html>

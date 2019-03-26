@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        body{
+            background-color: blue;
+        }
+        div{
+            border: 3px solid black;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+        .margin{
+            margin: 20px auto;
+        }
+        .padding{
+            padding: 20px
+        }
+        .content{
+            border: none;
+            height: 200px;
+            width: 200px;
+            background-color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="margin">
+    <div class="content">margin no padding</div>
+</div>
+<div class="padding">
+    <div class="content">padding no margin</div>
+</div>
+
+<div class="padding margin">
+    <div class="content">padding and margin</div>
+</div>
+
+</body>
+</html>

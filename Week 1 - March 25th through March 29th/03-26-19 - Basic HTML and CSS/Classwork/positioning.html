@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning</title>
+    <style>
+        div{
+            background-color: orange;
+            width: 400px;
+            height: 400px;
+        }
+        .relative{
+            /*position:relative;*/
+            /*position: sticky;*/
+        }
+        .absolute{
+            top: 50px;
+            left: 100px;
+            background-color: blue;
+            /*position: absolute;*/
+        }
+        .fixed{
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            /*position: fixed;*/
+        }
+        .parent{
+            /*top: 100px;*/
+            /*left: 50%;*/
+            margin-top: 100px;
+        }
+        .relative.child{
+            height: 300px;
+            width: 300px;
+            background-color: #FFFF00;
+            top: 50px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="relative parent">
+<div class="relative child">
+
+</div>
+</div>
+
+<div class="absolute"></div>
+<div class="fixed"></div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combinators</title>
+    <style>
+        /*DO NOT CHANGE DEFAULT STYLING BETWEEN HERE*/
+        div {
+            text-align: center;
+            padding: 5px;
+            display: inline-block;
+            width: 188px;
+            height: 188px;
+            margin: 2px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        div div
+        {
+            background-color: white;
+            margin: 30px auto;
+            display: block;
+            width: 88px;
+            height: 88px;
+        }
+        /*AND HERE*/
+
+        /*Without adding any classes or ids, style all outer boxes (with class names box1, box2, etc..) to have a
+        background color of orange. The inner divs should keep the default white background.
+        The direct sibling of .box2 should have a background color of purple. This should be done without using .box3
+        Any sibling after .box4 should have a background color of blue. This should be done without using .box5, .box6 etc.
+        Any div with a class name starting with abc should have a background color of yellow.
+        Any div with a class name ending with 'c' should have a background color of green.
+        Any div with a class name that contains '123' should have a text color of red.
+        */
+
+    </style>
+</head>
+<body>
+<main>
+    <h3 style="text-align: center">Check the html structure and then the notes in the style tag for instructions</h3>
+<div class="box1">
+    .box1
+    <div class="abc123">.abc123</div>
+
+</div>
+<div class="box2">
+    .box2
+    <div class="abc456">.abc456</div>
+</div>
+<div class="box3">
+    .box3
+    <div class="abc789">.abc789</div>
+</div>
+<div class="box4">
+    .box4
+    <div class="123abc">.123abc</div>
+</div>
+<div class="box5">
+    .box5
+    <div class="123def">.123def</div>
+</div>
+<div class="box6">
+    .box6
+    <div class="123ghi">.123ghi</div>
+</div>
+<div class="box7">
+    .box7
+    <div class="1a2b3c">.1a2b3c</div>
+</div>
+</main>
+
+
+</body>
+</html>

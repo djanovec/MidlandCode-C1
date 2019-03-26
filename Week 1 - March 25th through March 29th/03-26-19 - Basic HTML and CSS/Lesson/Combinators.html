@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combinators And Selectors or How I Learned to Stop Worrying and Love CSS</title>
+    <style>
+        .container div{
+            width: 100px;
+            height: 100px;
+            color: white;
+            border: 1px solid black;
+            background-color: #0088FF;
+            text-align: center;
+            margin: auto;
+        }
+        /*direct child*/
+        .container>div{
+            margin: 5px;
+            display: inline-block;
+            font-size: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: #FFa500;
+        }
+        /*adjacent sibling */
+        .div4 + div{
+            background-color: purple;
+        }
+        /*Any Siblings*/
+        .div5 ~ div{
+            border: 3px solid green;
+        }
+        /*ATTRIBUTE SELECTORS*/
+        /*Starts with*/
+        div[class^="adiv"]{
+            color: gray;
+        }
+        /*Ends with*/
+        div[class$="9"]{
+            background-color: yellow;
+        }
+        /*Contains*/
+        div[class*="div1"]{
+            text-shadow: 2px 2px 2px black;
+        }
+        /*With a psuedo-class*/
+        div[class$="div"]:not(:first-child):hover{
+            box-shadow: 2px 2px black;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="adiv1">adiv1<div class="subdiv">subdiv</div></div>
+    <div class="2div">2div<div class="subdiv">subdiv</div></div>
+    <div class="adiv3">adiv3<div class="subdiv">subdiv</div></div>
+    <div class="div4">div4<div class="subdiv">subdiv</div></div>
+    <div class="div5">div5<div class="subdiv">subdiv</div></div>
+    <div class="6div">6div<div class="subdiv">subdiv</div></div>
+    <div class="7div">7div<div class="subdiv">subdiv</div></div>
+    <div class="8div">8div<div class="subdiv">subdiv</div></div>
+    <div class="adiv9">adiv9<div class="subdiv">subdiv</div></div>
+    <div class="div10">div10<div class="subdiv">subdiv</div></div>
+</div>
+</body>
+</html>

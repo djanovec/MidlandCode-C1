@@ -1,0 +1,78 @@
+<!-- Below is an example of improper use of DRY Practices, taking what you know, fix the CSS AND the HTML to follow DRY practices-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DRY CSS</title>
+    <style>
+        div:nth-child(1n+6){
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            margin: 5px;
+            background-color: #0088FF;
+            color: white;
+            line-height: 150px;
+            text-align: center;
+        }
+        div:nth-child(-1n+5){
+            margin: 5px;
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+            background-color: #FFa500;
+            color: white;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        div:nth-child(2), div:nth-child(3){
+            border: 1px solid black;
+        }
+
+        div:nth-child(4), div:nth-child(5){
+            border: 1px solid red;
+            border-radius: 10px;
+        }
+        div:nth-child(6), div:nth-child(7), div:nth-child(8){
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        div:nth-child(1n+9){
+            text-align: right !important;
+        }
+
+        h3:first-child{
+            background-color: #FFa500;
+            color: white;
+            text-align: center;
+        }
+
+        h3:last-child{
+            color: white;
+            text-align: right;
+            background-color: #0088FF;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<h3>DRY CSS</h3>
+<div>Div 1</div>
+<div>Div 2</div>
+<div>Div 3</div>
+<div>Div 4</div>
+<div>Div 5</div>
+<div>Div 6</div>
+<div>Div 7</div>
+<div>Div 8</div>
+<div>Div 9</div>
+<div>Div 10</div>
+<h3>What can we fix?</h3>
+</body>
+</html>

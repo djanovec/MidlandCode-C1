@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Different Sizing</title>
+    <style>
+
+        div:not(.emWrapper){
+            background-color: aqua;
+            height: 75px;
+            margin: 10px auto;
+            line-height: 100px;
+            vertical-align: middle;
+        }
+
+        .center{
+            text-align: center;
+        }
+
+        .byRem{
+            width: 10rem;
+        }
+
+        .byPct{
+
+            width: 10%;
+        }
+
+        .byEm{
+            width: 10em;
+        }
+
+        .byVh{
+            width: 50vh;
+        }
+
+        .byVw{
+            width: 10vw;
+        }
+
+        .byPx{
+            width: 120px;
+        }
+
+        .byMm{
+            width: 100mm;
+        }
+
+        .byCm{
+            width: 10cm;
+        }
+
+        .emWrapper{
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<h1 class="center">Absolute Lengths</h1>
+
+<div class="center byPx">Px</div>
+
+<div class="center byCm">Cm</div>
+
+<div class="center byMm">Mm</div>
+
+<h1 class="center">Relative Lengths</h1>
+
+<div class="center byPct">%</div>
+
+<div class="center emWrapper">
+<div class="center byEm">Em</div>
+</div>
+<div class="center byVh">vh</div>
+
+<div class="center byVw">vw</div>
+
+<div class="center emWrapper">
+<div class="center byRem">Rem</div>
+</div>
+
+
+</body>
+</html>

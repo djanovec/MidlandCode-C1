@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to Declare Colors</title>
+    <style>
+        div{
+            display: inline-block;
+            width: 14.2%;
+            height: 100px;
+            margin: 0 -2px;
+        }
+        h1, p{
+            text-align: center;
+        }
+
+        .red{
+            background-color: red;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .indigo{
+            background-color: indigo;
+        }
+        .violet{
+            background-color: violet;
+        }
+
+        .blue, .indigo, .violet{
+            color: white;
+        }
+
+        .redH{
+            background-color: #FF0000;
+        }
+        .orangeH{
+            background-color: #FFa500;
+        }
+        .yellowH{
+            background-color: #FFFF00;
+        }
+        .greenH{
+            background-color: #008000;
+        }
+        .blueH{
+            background-color: #0000FF;
+        }
+        .indigoH{
+            background-color: #4b0082;
+        }
+        .violetH{
+            background-color: #ee82ee;
+        }
+
+        .redR{
+            background-color: rgb(255,0,0);
+        }
+        .orangeR{
+            background-color: rgb(255,165,0);
+        }
+        .yellowR{
+            background-color: rgb(255,255,0);
+        }
+        .greenR{
+            background-color: rgb(0,128,0);
+        }
+        .blueR{
+            background-color: rgb(0,0,255);
+        }
+        .indigoR{
+            background-color: rgb(75,0,130);
+        }
+        .violetR{
+            background-color: rgb(238,130,238);
+        }
+
+        .redRA{
+            background-color: rgba(255,0,0,.5);
+        }
+        .orangeRA{
+            background-color: rgba(255,165,0,.5);
+        }
+        .yellowRA{
+            background-color: rgba(255,255,0,.5);
+        }
+        .greenRA{
+            background-color: rgba(0,128,0,.5);
+        }
+        .blueRA{
+            background-color: rgba(0,0,255,.5);
+        }
+        .indigoRA{
+            background-color: rgba(75,0,130,.5);
+        }
+        .violetRA{
+            background-color: rgba(238,130,238,.5);
+        }
+
+
+        .redHs{
+            background-color: hsl(0,100%,50%);
+        }
+        .orangeHs{
+            background-color: hsl(39,100%, 50%);
+        }
+        .yellowHs{
+            background-color: hsl( 60,100%, 50%);
+        }
+        .greenHs{
+            background-color: hsl(120, 100%, 25%);
+        }
+        .blueHs{
+            background-color: hsl( 240, 100%, 50%);
+        }
+        .indigoHs{
+            background-color: hsl(275, 100%, 25%);
+        }
+        .violetHs{
+            background-color: hsl(300, 76%, 72%);
+        }
+
+        .blue, .indigo, .violet, .blueH, .indigoH, .violetH, .blueHs, .indigoHs, .violetHs, .blueR, .blueRA, .indigoR, .indigoRA, .violetR, .violetRA{
+            color: white;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<h1>Keyword Colors</h1>
+<div class="red">red</div>
+<div class="orange">orange</div>
+<div class="yellow">yellow</div>
+<div class="green">green</div>
+<div class="blue">blue</div>
+<div class="indigo">indigo</div>
+<div class="violet">violet</div>
+<p>Currently there are dozens of keywords as of last revision. More can be found <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">here</a></p>
+
+<h1>Hex Values</h1>
+<div class="redH">#FF0000</div>
+<div class="orangeH">#FFa500</div>
+<div class="yellowH">#FFFF00</div>
+<div class="greenH">#008000</div>
+<div class="blueH">#0000FF</div>
+<div class="indigoH">#4b0082</div>
+<div class="violetH">#ee82ee</div>
+<p>There are literally 16<sup>6</sup> different combinations of hex values. You can play around with picking some <a href="https://htmlcolorcodes.com/color-picker/">here</a></p>
+
+
+<h1>RGB(Alpha) Values</h1>
+<div class="redR">rgb(255,0,0)</div>
+<div class="orangeR">rgb(255,165,0)</div>
+<div class="yellowR">rgb(255,255,0)</div>
+<div class="greenR">rgb(0,128,0)</div>
+<div class="blueR">rgb(0,0,255)</div>
+<div class="indigoR">rgb(75,0,130)</div>
+<div class="violetR">rgb(238,130,238)</div>
+<div class="redRA">rgb(255,0,0, .5)</div>
+<div class="orangeRA">rgb(255,165,0, .5)</div>
+<div class="yellowRA">rgb(255,255,0, .5)</div>
+<div class="greenRA">rgb(0,128,0, .5)</div>
+<div class="blueRA">rgb(0,0,255, .5)</div>
+<div class="indigoRA">rgb(75,0,130, .5)</div>
+<div class="violetRA">rgb(238,130,238, .5)</div>
+<p>There are just as many options as Hex values. This is just a different way of writing them. The last section of the above
+    include the a value for transparency. You can play around with picking some <a href="https://htmlcolorcodes.com/color-picker/">here</a></p>
+
+<h1>HSL (Hue, Saturation, Lightness) Values</h1>
+<div class="redHs">hsl(0,100%, 50%)</div>
+<div class="orangeHs">hsl(39,100%,50%)</div>
+<div class="yellowHs">hsl(60,100%,50%)</div>
+<div class="greenHs">hsl(120,100%,25%)</div>
+<div class="blueHs">hsl(240,100%,50%)</div>
+<div class="indigoHs">hsl(275,100%,25%)</div>
+<div class="violetHs">hsl(300,76%,72%)</div>
+<p>There are just as many options as Hex and RGB values. This is just a different way of writing them. The last three of the above values
+    include the a value for transparency. You can play around with picking some <a href="https://htmlcolorcodes.com/color-picker/">here</a></p>
+
+</body>
+</html>
