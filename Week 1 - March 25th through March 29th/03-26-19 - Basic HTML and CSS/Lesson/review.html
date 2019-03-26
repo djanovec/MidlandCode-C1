@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    td, th{
+        border: 1px solid black;
+    }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td></td>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <th>Morning</th>
+            <td colspan="3">Something</td>
+            <td>Something else</td>
+            <td>A third thing</td>
+        </tr>
+        <tr>
+            <th>Afternoon</th>
+            <td rowspan="2">A</td>
+            <td>B</td>
+            <td>C</td>
+            <td colspan="2" rowspan="2"> Large Cell</td>
+        </tr>
+        <tr>
+            <th>Evening</th>
+            <td>dskjfh</td>
+            <td>dsjlfjasd</td>
+        </tr>
+</table>
+
+
+    <form>
+        <fieldset>
+            <legend>Name</legend>
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" placeholder="First Name" id="firstName">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" placeholder="Last Name" id="lastName">
+        </fieldset> 
+        <div>
+        <input id="morning" type="checkbox" name="contactTime" value="morning">
+        <label for="morning">Morning</label>
+    </div>
+        <input id="afternoon" type="checkbox" name="contactTime" value="afternoon">
+        <label for="afternoon">Afternoon</label>
+        <input id="evening" type="checkbox" name="contactTime" value="evening">
+        <label for="evening">Evening</label>
+        <input id="night" type="checkbox" name="contactTime" value="night">
+        <label for="night">Night</label>
+
+        <label for="hairColor">Hair Color</label>
+        <select id="hairColor" name="hairColor">
+            <!-- Crazy -->
+            <optgroup label="Crazy">
+            <option value="purple">Purple</option>
+            <option value="green">Green</option>
+            </optgroup> 
+<!-- Funky -->
+<optgroup label="Funky">
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+        </optgroup>
+        </select>
+        
+    </form>
+    
+    
+</body>
+
+</html>

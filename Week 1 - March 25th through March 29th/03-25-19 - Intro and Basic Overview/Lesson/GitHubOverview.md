@@ -115,3 +115,16 @@ http://git-annex.branchable.com/walkthrough/ #see ssh section
 `git annex copy --from myremote mybigfile`specify the remote from which to get the file  
 
 
+…or create a new repository on the command line
+* echo "# test-repo" >> README.md
+* git init
+* git add README.md
+* git commit -m "first commit"
+* git remote add origin git@github.com:miketruax/ 
+* test-repo.git
+* git push -u origin master
+
+…or push an existing repository from the command line
+* git remote add origin git@github.com:miketruax/
+* test-repo.git
+* git push -u origin master

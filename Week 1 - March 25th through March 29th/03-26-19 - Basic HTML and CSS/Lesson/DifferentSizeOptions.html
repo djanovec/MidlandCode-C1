@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Different Sizing</title>
     <style>
-
-        div:not(.emWrapper){
+        div:not(.emWrapper) {
             background-color: aqua;
             height: 75px;
             margin: 10px auto;
@@ -13,73 +13,74 @@
             vertical-align: middle;
         }
 
-        .center{
+        .center {
             text-align: center;
         }
 
-        .byRem{
+        .byRem {
             width: 10rem;
         }
 
-        .byPct{
-
-            width: 10%;
+        .byPct {
+            /* padding 10 border of 2 */
+            width: calc(50% - 24px);
         }
 
-        .byEm{
+        .byEm {
             width: 10em;
         }
 
-        .byVh{
+        .byVh {
             width: 50vh;
         }
 
-        .byVw{
+        .byVw {
             width: 10vw;
         }
 
-        .byPx{
+        .byPx {
             width: 120px;
         }
 
-        .byMm{
+        .byMm {
             width: 100mm;
         }
 
-        .byCm{
+        .byCm {
             width: 10cm;
         }
 
-        .emWrapper{
-            font-size: 10px;
+        .emWrapper {
+            font-size: 20px;
         }
-
     </style>
 </head>
+
 <body>
-<h1 class="center">Absolute Lengths</h1>
+    <h1 class="center">Absolute Lengths</h1>
 
-<div class="center byPx">Px</div>
+    <div class="center byPx">Px</div>
 
-<div class="center byCm">Cm</div>
+    <div class="center byCm">Cm</div>
 
-<div class="center byMm">Mm</div>
+    <div class="center byMm">Mm</div>
 
-<h1 class="center">Relative Lengths</h1>
+    <h1 class="center">Relative Lengths</h1>
 
-<div class="center byPct">%</div>
+    <div class="center byPct">%</div>
 
-<div class="center emWrapper">
-<div class="center byEm">Em</div>
-</div>
-<div class="center byVh">vh</div>
+    <div class="center emWrapper">
+        <div class="center byEm">Em</div>
+    </div>
+    <div class="center byVh">vh</div>
 
-<div class="center byVw">vw</div>
+    <div class="center byVw">vw</div>
 
-<div class="center emWrapper">
-<div class="center byRem">Rem</div>
-</div>
+    <div class="center emWrapper">
+        <div class="center byRem">Rem</div>
+    </div>
 
 
 </body>
+
 </html>
