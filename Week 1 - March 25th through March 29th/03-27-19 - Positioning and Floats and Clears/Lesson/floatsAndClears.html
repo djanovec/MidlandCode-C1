@@ -7,9 +7,7 @@
         .right{
             float: right;
         }
-        .left{
-            float: left;
-        }
+
         div:not(.container){
             margin: auto;
             border: 2px solid black;
@@ -19,6 +17,10 @@
             text-align: center;
             line-height: 100px;
             color: white;
+        }
+
+        .left{
+            float: left;
         }
 
         .inline-block{
@@ -66,9 +68,9 @@
 <div class="clearfix container">
 <h1>Floated Divs</h1>
 <div class="left">1</div>
-<div class="right">2</div>
+<div class="left">2</div>
 <div class="left">3</div>
-<div class="right">4</div>
+<div class="left">4</div>
 <div class="left">5</div>
 <div class="right">6</div>
 <div class="left">7</div>
@@ -77,13 +79,15 @@
 <div class="clearfix container">
 <h1>Cleared Divs</h1>
 <div class="right clearRight">1</div>
-<div class="left clearLeft">2</div>
+<div class="left clearLeft" style="margin-left: 50px;">2</div>
 <div class="right clearRight">3</div>
-<div class="left clearLeft">4</div>
+<div class="left ">4</div>
 <div class="right clearRight">5</div>
 <div class="left clearLeft">6</div>
-<p style="text-align: center">THIS IS A P TAG BETWEEN SIX FLOATING DIVS</p>
-    <div class="right clearBoth">1</div>
+<p class="clearBoth" style="text-align: center">THIS IS A P TAG BETWEEN SIX FLOATING DIVSss
+</p>
+
+<div class="right clearBoth">1</div>
 <div class="left clearBoth">2</div>
 <div class="right clearBoth">3</div>
 <div class="left clearBoth">4</div>
