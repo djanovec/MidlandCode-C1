@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>It's Absolutely Relative</title>
+    <style>
+        div {
+            height: 300px;
+            width: 300px;
+            background-color: #0088FF;
+            display: inline-block;
+            color: white;
+            margin: 5px;
+            border: 1px solid black;
+        }
+
+        .container {
+            width: calc(100% - 10px);
+            height: 500px;
+            background-color: #FFa500;
+        }
+
+        .header {
+            height: 100px;
+            background-color: black;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .relative {
+            z-index: 10;
+            position: relative;
+            top: 100px;
+            left: 200px;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+        .relativeC {
+            position: relative;
+            left: 200px;
+            top: 100px;
+        }
+
+        .absoluteC {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<header class="header"></header>
+<div class="relative">Relative top: 100, left: 200</div>
+<div class="absolute">Absolute top:0, left: 0</div>
+<div class="fixed">Fixed bottom: 0, right: 0</div>
+<div class="container">
+    Container
+    <div class="relativeC">Relative in Container, top: 100, right: 200</div>
+    <div class="absoluteC">Absolute in Container,  top: 0, right: 0;</div>
+</div>
+</body>
+</html>
