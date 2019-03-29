@@ -11,7 +11,10 @@
             width: 10%;
             padding-top: 10%;
         }
-        div[class]{
+        .black{
+            background-color: black;
+        }
+        div:not(.black){
             box-shadow: inset -1px -1px 20px darkslategrey;
         }
         .cyan{
@@ -35,15 +38,16 @@
         .yellow{
             background-color: yellow;
         }
-        .left:not(.right), .right:not(.left){
+        .left, .right{
             width: calc(10% - 1px);
-        }
-        .top:not(.bottom), .bottom:not(.top){
-            padding-top: calc(10% - 1px);
         }
         .top.bottom{
             padding-top: calc(10% - 2px);
         }
+        .top, .bottom{
+            padding-top: calc(10% - 1px);
+        }
+  
         .left.right{
             width: calc(10% - 2px);
         }
@@ -74,24 +78,24 @@
 <div class="yellow top right bottom"></div>
 <div class="purple top left bottom"></div>
 <div class="purple top right"></div>
-<div></div>
+<div class="black"></div>
 <div class="blue top left"></div>
 <div class="blue top right"></div>
 <div class="orange top left right"></div>
-<div></div>
+<div class="black"></div>
 <div class="green left bottom"></div>
 <div class="green top right"></div>
 <div class="red top left bottom"></div>
 <div class="red top right"></div>
 <div class ="purple left bottom right"></div>
-<div></div>
+<div class="black"></div>
 <div class="blue bottom left"></div>
 <div class="blue bottom right"></div>
 <div class ="orange left bottom"></div>
 <div class ="orange top bottom"></div>
 <div class ="orange top right bottom"></div>
 <div class ="green left right bottom"></div>
-<div></div>
+<div class="black"></div>
 <div class="red left bottom"></div>
 <div class="red top right bottom"></div>
 <div class="orange left top bottom"></div>

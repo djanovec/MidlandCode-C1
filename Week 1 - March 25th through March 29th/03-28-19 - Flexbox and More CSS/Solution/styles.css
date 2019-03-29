@@ -70,7 +70,7 @@ nav, footer, header{
     background-color: whitesmoke;
 }
 
-.link, .sideLink{
+.link, .side-link{
     text-decoration: none;
     color: black;
 
@@ -85,7 +85,7 @@ nav, footer, header{
     background-color: black;
 }
 
-.sideLink:hover{
+.side-link:hover{
     background-color: lightgrey;
 }
 
@@ -144,6 +144,6 @@ nav, footer, header{
 }
 
 .footer-headline{
-    color: black;
+    /* color: black; */
     text-shadow: white 1px 1px;
 }
