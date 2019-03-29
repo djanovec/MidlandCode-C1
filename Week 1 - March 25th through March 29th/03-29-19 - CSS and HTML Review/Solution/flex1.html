@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+            
+/* Header */
+
+.banner{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.header-class {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 48px;
+    font-family: monospace;
+    line-height: 100px;
+}
+
+/* Main Content Classes */
+
+.main-content {
+    width: 65%;
+    /* float: left; */
+}
+
+.flex-row-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*OR -  flex-flow: row wrap*/
+}
+
+.main-sub-content {
+    background-color: blue;
+    /* flex: 1 1 100px;
+ */
+    flex-grow: 1;
+    flex-basis: 300px;
+    min-height: 100px;
+    margin: 5px;
+    font-size: 48px;
+    color: white;
+    border: 1px solid black;
+}
+
+/* Side Content Classes */
+
+.side-content {
+    width: 35%;
+    margin: auto;
+    /* float: right; */
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-sub-content {
+    background-color: red;
+    flex: 1 1 100px;
+    height: 100px;
+    margin: 5px;
+    font-size: 48px;
+    color: white;
+    border: 1px solid black;
+}
+
+/* Footer Class */
+
+.footer {
+    /* clear: both; */
+    margin-bottom: 20px;
+    color: white;
+    font-size: 48px;
+    font-family: monospace;
+    line-height: 100px;
+}
+/* HELPERS */
+.text-center{
+    text-align: center;
+}
+
+/* Order Classes */
+
+.order1 {
+    order: 1;
+}
+
+.order2 {
+    order: 2;
+}
+
+.order3 {
+    order: 3;
+}
+
+.order4 {
+    order: 4;
+}
+
+.order5 {
+    order: 5;
+}
+
+.order6 {
+    order: 6;
+}
+    </style>
+</head>
+<body>
+        <header class="text-center header-class banner">HEADER</header>
+ <div class="flex-row-wrap">
+        <div class="text-center main-content flex-row-wrap">
+            <div class="text-center main-sub-content order1">1</div>
+            <div class="text-center main-sub-content order3">2</div>
+            <div class="text-center main-sub-content order6">3</div>
+            <div class="text-center main-sub-content order5">4</div>
+            <div class="text-center main-sub-content order4">5</div>
+            <div class="text-center main-sub-content order2">6</div>
+        </div>
+        
+        <div class="text-center side-content flex-column">
+            <div class="text-center side-sub-content order3">1</div>
+            <div class="text-center side-sub-content order1">2</div>
+            <div class="text-center side-sub-content order2">3</div>
+        </div>
+    </div>
+        <footer class="footer banner text-center">Footer
+
+        </footer>
+    
+</body>
+</html>

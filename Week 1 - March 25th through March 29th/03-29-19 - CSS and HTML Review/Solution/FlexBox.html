@@ -45,6 +45,9 @@
         .grow{
             flex-grow: 1;
         }
+        .first{
+            order: -1;
+        }
 
 
 
@@ -64,8 +67,8 @@
     <div class="content center three-hundred">This div should have a basis width of: 300px, should NOT be able to grow, and should be able to shrink</div>
     <div class="content center half grow">This div should have a basis width of: 50%, should be able to grow, and should be able to shrink</div>
     <div class="content center two-hundred">This div should have a basis width of: 200px, should NOT be able to grow, and should be able to shrink</div>
-    <div class="content center two-hundred noshrink">This div should have a basis width of: 200px, should be able to grow, and should be NOT able to shrink</div>
-    <div class="content center quarter grow">This div should have a basis width of: 25%, should be able to grow, should be able to shrink And should be the first Item</div>
+    <div class="content center two-hundred noshrink grow">This div should have a basis width of: 200px, should be able to grow, and should be NOT able to shrink</div>
+    <div class="content center quarter grow first">This div should have a basis width of: 25%, should be able to grow, should be able to shrink And should be the first Item</div>
 
 
 </div>
