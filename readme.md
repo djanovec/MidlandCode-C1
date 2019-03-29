@@ -1,4 +1,4 @@
-# General Syllabus - Code Academy
+# Midland Code Academy
 ## Table of Contents
 * [General Overview](#general-overview)
 * [Week 1](#week-1)
@@ -32,6 +32,7 @@ Each week will consist of five class days of topics that will be (generally) str
 There will also be time to work on the daily homework depending on review needs / complexity of that day’s topics.
 Fridays will serve (for most weeks) as a review of all weekly topics and further class work as needed. In addition to the in-class work, each Friday will have a larger homework assignment to be completed over the weekend and reviewed the following Monday. This homework will encompass all topics that were covered in the week. There will be time on Friday to ask any questions pertaining to the homework as well as time towards the end of class to be able to work it. In addition to the above, every Friday will consist of a group lunch with Brock to discuss how the class is going and if there are any issues to be brought up. The lead instructor will not be present for this lunch as it is meant to be a free and open discussion about anything regarding the class. 
 
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # Week 1
@@ -68,7 +69,7 @@ The first week will be dedicated to the most basic web development topics. The w
 * Group lunch with Brock
 * Meeting with Tek Systems (Tech Recruiter in Omaha)
 
-
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # Week 2
@@ -104,6 +105,7 @@ By the end of the week, students should have a full understanding of JS types an
 * Group lunch with Brock
 * In class group project and larger homework assignment
 
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 ## Week 3
@@ -139,7 +141,7 @@ By the end of the week, students should be able to consume any (well documented)
 * Resume Workshop
 * Basic introduction to Angular and SPAs
 
-
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # Week 4 
@@ -173,7 +175,7 @@ By the end of the week students should understand the basic concepts of Angular 
 * Introduction to Material Design
 * More complex Angular Topics
 
-
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # Week 5
@@ -207,7 +209,7 @@ By the end of the week students should understand Observables and the difference
 * Group lunch with Brock
 * Introduction to databases 
 
-
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # Week 6 
@@ -241,7 +243,7 @@ By the end of the week, students should be able to CRUD data in a table via SQL 
 * General overview of getting database information via and API
 * More advanced Express topics
 
-
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # Week 7 
@@ -275,7 +277,7 @@ Students should be able to construct an API using best practices. Students shoul
 * Deployment overview
 * Deploy an application
 
-
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # Week 8 
@@ -308,7 +310,7 @@ Students should be able to explain how to set up authentication for a server as 
 * Group lunch with Brock
 * Continued review with customized class and homework
 
-
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # Week 9 
@@ -317,6 +319,7 @@ Students should be able to explain how to set up authentication for a server as 
 ### Overview - 
 Java with Guest Instructor
 
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # Week 10 
@@ -325,6 +328,7 @@ Java with Guest Instructor
 ### Overview - 
 Java with Guest Instructor
 
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # Week 11 
@@ -357,7 +361,7 @@ These weeks will mark the beginning of the Final Project. The class will be divi
 * Project Work
 * Group lunch with updates from all teams
 
-
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # Week 12 
@@ -390,6 +394,7 @@ This marks the final week of class and as such is the final week to work on the 
 * Group lunch with updates from all teams
 * Project Delivery to client and showcase to Code Academy faculty, students, and families of students.
 
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
 ---
 
 # HTML Reference
@@ -422,6 +427,8 @@ Most used for pretty much all elements are `class`, `id`, and `style`. Below wil
 * `<button></button>` - Allows for a button to display
 * `<script></script>` - Allows for inline javascript or the loading of an external javascript file.
 
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
+-----
 # CSS Reference
 ## Most Used CSS and their Uses
 * `background` - Single declaration styling to set multiple background properties.
@@ -471,3 +478,7 @@ Most used for pretty much all elements are `class`, `id`, and `style`. Below wil
 * `visibility` - Can make an item `visible` or `hidden`
 * `width` - Sets the width of an element.
 * `z-index` - Pushes elements in front of or behind other elements in respect to the user.
+
+<sub><sup>[Back to Top](#midland-code-academy)</sup></sub>
+--------
+
