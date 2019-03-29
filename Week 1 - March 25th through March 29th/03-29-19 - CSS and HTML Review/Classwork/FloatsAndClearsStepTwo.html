@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FloatsAndClears</title>
+    <style>
+        .left, .right {
+            height: 40px;
+            border: 1px solid black;
+            margin: 2px;
+            color: white;
+            line-height: 40px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .left {
+            background-color: #FFa500;
+            width: calc(75% - 8px);
+        }
+
+        .right {
+            background-color: #0088FF;
+            width: calc(25% - 8px);
+        }
+
+        button {
+            cursor: pointer;
+            display: inline-block;
+            width: calc(40% - 5px);
+            margin: 10px 5%;
+        }
+
+        /*Add styling below to allow the .right class to float right and the .left class to float left.
+        Also, make sure they appear next to each other in a nice grid format:
+        L1  R1
+        L2  R2
+        L3  R3 etc.
+        There are two ways to do this. I would suggest doing both. Try to remember which one is best practice and why */
+
+    </style>
+</head>
+<body>
+<h3 style="text-align: center">See Comments in the style tag in the head for instructions</h3>
+
+<div class="right">R-1</div>
+<div class="left">L-1</div>
+<div class="right">R-2</div>
+<div class="right">R-3</div>
+<div class="left">L-2</div>
+<div class="left">L-3</div>
+<div class="left">L-4</div>
+<div class="right">R-4</div>
+<div class="left">L-5</div>
+<div class="left">L-6</div>
+<div class="right">R-5</div>
+<div class="right">R-6</div>
+</body>
+</html>

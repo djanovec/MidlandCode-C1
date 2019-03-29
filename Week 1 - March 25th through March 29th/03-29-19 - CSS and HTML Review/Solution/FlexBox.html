@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlexBox</title>
+    <style>
+        /*Feel Free to add classes and styling as you see fit.*/
+        .content{
+            border: 1px solid black;
+            background-color: #FFa500;
+            color: white;
+        }
+        /*There are a lot of ways to do it. For the most reusable classes here's how I would do it. Flex Grow defaults to 0*/
+        /*and Flex shrink defaults to 1 so I take advantage of defaults and only create classes that change the default*/
+
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /*or the simpler flex-flow: row wrap;*/
+        }
+        .center{
+            text-align: center;
+        }
+        .quarter{
+            flex-basis: 25%;
+        }
+
+        .half{
+            flex-basis: 50%;
+        }
+
+        .three-hundred{
+            flex-basis: 300px;
+        }
+
+        .two-hundred{
+            flex-basis: 200px;
+        }
+
+        .noshrink{
+            flex-shrink: 0;
+        }
+
+        .grow{
+            flex-grow: 1;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<h3 class="center"> The container below should be a flex box with rows that wrap with space around for justifying content. Follow the instructions for each div below regarding styling guidelines</h3>
+<div class="container">
+    <div class="content center quarter grow">This div should have a basis width of: 25%, should be able to grow, and should be able to shrink</div>
+    <div class="content center three-hundred noshrink">This div should have a basis width of: 300px, should NOT be able to grow, and should be NOT able to shrink</div>
+    <div class="content center three-hundred grow">This div should have a basis width of: 300px, should be able to grow, and should be able to shrink</div>
+    <div class="content center three-hundred grow">This div should have a basis width of: 300px, should be able to grow, and should be able to shrink</div>
+    <div class="content center quarter grow">This div should have a basis width of: 25%, should be able to grow, and should be able to shrink</div>
+    <div class="content center half grow">This div should have a basis width of: 50%, should be able to grow, and should be able to shrink</div>
+    <div class="content center two-hundred noshrink">This div should have a basis width of: 200px, should NOT be able to grow, and should NOT be able to shrink</div>
+    <div class="content center two-hundred grow">This div should have a basis width of: 200px, should be able to grow, and should be able to shrink</div>
+    <div class="content center three-hundred">This div should have a basis width of: 300px, should NOT be able to grow, and should be able to shrink</div>
+    <div class="content center half grow">This div should have a basis width of: 50%, should be able to grow, and should be able to shrink</div>
+    <div class="content center two-hundred">This div should have a basis width of: 200px, should NOT be able to grow, and should be able to shrink</div>
+    <div class="content center two-hundred noshrink">This div should have a basis width of: 200px, should be able to grow, and should be NOT able to shrink</div>
+    <div class="content center quarter grow">This div should have a basis width of: 25%, should be able to grow, should be able to shrink And should be the first Item</div>
+
+
+</div>
+</body>
+</html>

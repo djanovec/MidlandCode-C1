@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Box Practice</title>
+
+    <style>
+
+        .main .item {
+            color: white;
+            background-color: #0088FF;
+        }
+
+        .main .item:nth-child(4n+4) {
+            background-color: #FFa500;
+        }
+
+        .main .item:nth-child(4n+3) {
+            background-color: #154ca5;
+        }
+
+        .main .item:nth-child(4n+2) {
+            background-color: orangered;
+        }
+
+        .main {
+            border-bottom: 1px solid black;
+            float: left;
+            width: calc(((100% / 3) * 2) - 1px);
+            display: flex;
+            flex-flow: wrap row;
+        }
+
+        .main .item {
+            padding: 10px;
+            flex: 1 0 200px;
+        }
+
+        .aside {
+            border: solid black;
+            border-width: 1px 0 1px 1px;
+            float: right;
+            width: calc(100% / 3);
+            display: flex;
+            flex-flow: wrap column;
+        }
+
+        .aside .item {
+            padding: 10px;
+            color: white;
+            background-color: green;
+            flex: 1 1 150px;
+        }
+
+        .aside .item:nth-child(odd) {
+            background-color: darkgreen;
+        }
+
+        .left {
+            float: left;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+            padding-right: 10px;
+        }
+
+        .important {
+            flex: 1 1 600px !important;
+        }
+
+        .first {
+            order: -1;
+        }
+
+        .last {
+            order: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+<!--<div class="page">-->
+<div class="main">
+    <div class="item">
+        <img class="left" src="https://placeimg.com/100/100/animals?t=1526921080278">
+        <p>1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros blandit, faucibus
+            luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl. Pellentesque sagittis erat
+            id justo lacinia, in vehicula augue cursus. Ut ac tempor lectus. Nunc semper dolor ut leo semper
+            consectetur. Morbi sagittis nisi justo, in tempor justo faucibus venenatis. Maecenas facilisis congue nunc,
+            id dignissim erat bibendum vitae. In fermentum, nibh eu lacinia laoreet, sapien felis ullamcorper nisl,
+            feugiat mattis enim sem eget enim. Sed sed neque et elit sodales porta.</p>
+    </div>
+    <div class="item">
+        <img class="left" src="https://placeimg.com/100/100/animals?t=1526921080278">
+        <p>2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros blandit, faucibus
+            luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl. Pellentesque sagittis erat
+            id justo lacinia, in vehicula augue cursus. Ut ac tempor lectus. Nunc semper dolor ut leo semper
+            consectetur. Morbi sagittis nisi justo, in tempor justo faucibus venenatis. Maecenas facilisis congue nunc,
+            id dignissim erat bibendum vitae. In fermentum, nibh eu lacinia laoreet, sapien felis ullamcorper nisl,
+            feugiat mattis enim sem eget enim. Sed sed neque et elit sodales porta.</p>
+    </div>
+    <div class="item important">
+        <img class="left" src="https://placeimg.com/100/100/animals?t=1526921080278">
+        <p>3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros blandit, faucibus
+            luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl. Pellentesque sagittis erat
+            id justo lacinia, in vehicula augue cursus. Ut ac tempor lectus. Nunc semper dolor ut leo semper
+            consectetur. Morbi sagittis nisi justo, in tempor justo faucibus venenatis. Maecenas facilisis congue nunc,
+            id dignissim erat bibendum vitae. In fermentum, nibh eu lacinia laoreet, sapien felis ullamcorper nisl,
+            feugiat mattis enim sem eget enim. Sed sed neque et elit sodales porta.</p>
+    </div>
+    <div class="item first">
+        <img class="left" src="https://placeimg.com/100/100/animals?t=1526921080278">
+        <p>4 FIRST: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros blandit,
+            faucibus
+            luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl. Pellentesque sagittis erat
+            id justo lacinia, in vehicula augue cursus. Ut ac tempor lectus. Nunc semper dolor ut leo semper
+            consectetur. Morbi sagittis nisi justo, in tempor justo faucibus venenatis. Maecenas facilisis congue nunc,
+            id dignissim erat bibendum vitae. In fermentum, nibh eu lacinia laoreet, sapien felis ullamcorper nisl,
+            feugiat mattis enim sem eget enim. Sed sed neque et elit sodales porta.</p>
+    </div>
+    <div class="item last">
+        <img class="left" src="https://placeimg.com/100/100/animals?t=1526921080278">
+        <p>5 LAST: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros blandit, faucibus
+            luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl. Pellentesque sagittis erat
+            id justo lacinia, in vehicula augue cursus. Ut ac tempor lectus. Nunc semper dolor ut leo semper
+            consectetur. Morbi sagittis nisi justo, in tempor justo faucibus venenatis. Maecenas facilisis congue nunc,
+            id dignissim erat bibendum vitae. In fermentum, nibh eu lacinia laoreet, sapien felis ullamcorper nisl,
+            feugiat mattis enim sem eget enim. Sed sed neque et elit sodales porta.</p>
+    </div>
+    <div class="item">
+        <img class="left" src="https://placeimg.com/100/100/animals?t=1526921080278">
+        <p>6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros blandit, faucibus
+            luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl. Pellentesque sagittis erat
+            id justo lacinia, in vehicula augue cursus. Ut ac tempor lectus. Nunc semper dolor ut leo semper
+            consectetur. Morbi sagittis nisi justo, in tempor justo faucibus venenatis. Maecenas facilisis congue nunc,
+            id dignissim erat bibendum vitae. In fermentum, nibh eu lacinia laoreet, sapien felis ullamcorper nisl,
+            feugiat mattis enim sem eget enim. Sed sed neque et elit sodales porta.</p>
+    </div>
+    <div class="item">
+        <img class="left" src="https://placeimg.com/100/100/animals?t=1526921080278">
+        <p>7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros blandit,
+            faucibus
+            luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl. Pellentesque sagittis erat
+            id justo lacinia, in vehicula augue cursus. Ut ac tempor lectus. Nunc semper dolor ut leo semper
+            consectetur. Morbi sagittis nisi justo, in tempor justo faucibus venenatis. Maecenas facilisis congue nunc,
+            id dignissim erat bibendum vitae. In fermentum, nibh eu lacinia laoreet, sapien felis ullamcorper nisl,
+            feugiat mattis enim sem eget enim. Sed sed neque et elit sodales porta.</p>
+    </div>
+</div>
+<div class="aside">
+    <div class="item last">1LAST: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros
+        blandit, faucibus
+        luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl.
+    </div>
+    <div class="item">2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros blandit,
+        faucibus
+        luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl.
+    </div>
+    <div class="item">3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros blandit,
+        faucibus
+        luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl.
+    </div>
+    <div class="item">4Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros blandit,
+        faucibus
+        luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl.
+    </div>
+    <div class="item">5Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non eros blandit,
+        faucibus
+        luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl.
+    </div>
+    <div class="item first">6FIRST: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis risus non
+        eros blandit, faucibus
+        luctus magna porta. Praesent a mi ornare, fermentum ex vitae, ullamcorper nisl.
+    </div>
+</div>
+<!--</div>-->
+</body>
+</html>
