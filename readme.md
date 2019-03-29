@@ -1,6 +1,22 @@
 # General Syllabus - Code Academy
+## Table of Contents
+* [General Overview](#general-overview)
+* [Week 1](#week-1)
+* [Week 2](#week-2)
+* [Week 3](#week-3)
+* [Week 4](#week-4)
+* [Week 5](#week-5)
+* [Week 6](#week-6)
+* [Week 7](#week-7)
+* [Week 8](#week-8)
+* [Week 9](#week-9)
+* [Week 10](#week-10)
+* [Week 11](#week-11)
+* [Week 12](#week-12)
+* [HTML Reference](#html-reference)
+* [CSS Reference](#css-reference)
 
-## General Overview - 
+# General Overview
 
 Below is a general layout for each of the weeks and what to expect going in. While the specific structure of a day might change depending on subject complexity or review needed, the topics slated for a week will not (new topics might be added though depending on speed of comprehension). All of the topics listed for a week will be taught in the listed week and as such, you are encouraged to reach out for any assistance needed. 
 In addition to the class instruction, most weeks will include either a field trip to a local business/coding group/etc. to help build your network and/or a workshop on improving your soft skills and resume. While we have specific times to focus on these things, we strongly encourage you to ask any questions about how to grow your brand and/or network throughout the entirety of the course.
@@ -18,7 +34,8 @@ Fridays will serve (for most weeks) as a review of all weekly topics and further
 
 ---
 
-## Week 1: March 25th through March 29th
+# Week 1
+## March 25th through March 29th
 
 ### Overview - 
 The first week will be dedicated to the most basic web development topics. The week will focus on basic HTML structure as well as CSS structure to allow for styling. By the end of the week, students should have a complete understanding of HTML structure and an understanding of basic page layout with commonly used tags. Students should also be able to use all basic styling to style simple static webpages per a client’s needs. This will not include responsive design nor complex CSS like transitions / transforms / etc.
@@ -54,7 +71,8 @@ The first week will be dedicated to the most basic web development topics. The w
 
 ---
 
-## Week 2: April 1st through April 5th 
+# Week 2
+## April 1st through April 5th 
 
 ### Overview - 
 By the end of the week, students should have a full understanding of JS types and best practices for each. Students should understand how to set up and call functions as well as control statements / loops. Students should also understand the DOM and how to access any given class/element/etc. Given instructions, students should be able to take input from HTML elements and use data to do simple or moderately complex tasks and display them back to the DOM.
@@ -88,7 +106,8 @@ By the end of the week, students should have a full understanding of JS types an
 
 ---
 
-## Week 3: April 8th through April 12th 
+## Week 3
+## April 8th through April 12th 
 
 ### Overview - 
 By the end of the week, students should be able to consume any (well documented) 3rd party API. They should be able to design a fully responsive sight using mobile-first design. Students should also be able to understand how to add transitions using CSS. Students should be able to (given vague guidelines) design a site that can take input from a user to provide some form of functionality with or without API access. Students should also understand best practices for resume layout.
@@ -123,7 +142,8 @@ By the end of the week, students should be able to consume any (well documented)
 
 ---
 
-## Week 4: April 15th through April 19th 
+# Week 4 
+## April 15th through April 19th 
 
 ### Overview - 
 By the end of the week students should understand the basic concepts of Angular and it's file structure / binding to templates. Students should be able to build basic SPAs and allow for the handling of events without the use of raw DOM manipulation. Students should also begin to see the use of directives as well as styling via SASS. This will also mark the beginning of the students’ brand building which will continue throughout the class. 
@@ -156,7 +176,8 @@ By the end of the week students should understand the basic concepts of Angular 
 
 ---
 
-## Week 5: April 22nd through April 26th 
+# Week 5
+## April 22nd through April 26th 
 
 ### Overview - 
 By the end of the week students should understand Observables and the difference between them and promises. Students should be able to use Angular services to access an external API and use resolvers to handle route changes and give data to the loading component. Students should be able to use subscriptions to track any new values emitted by an observable and be able to map changes / utilize Rxjs tools for any new data emitted. After the intro to databases, students should be able to explain the difference between SQL and NoSQL databases.
@@ -189,7 +210,8 @@ By the end of the week students should understand Observables and the difference
 
 ---
 
-## Week 6: April 29th through May 3rd 
+# Week 6 
+## April 29th through May 3rd 
 
 ### Overview - 
 By the end of the week, students should be able to CRUD data in a table via SQL and cross reference any tables through the use of joins. Students should also be able to set up a very basic server and serve an Angular app through it. Students also need to be able to tell the limitations of certain database designs and explain best practices for them. Students should also be able to perform basic functions in node and utilize external libraries in node and install them through NPM and the use of a package.json file.
@@ -222,7 +244,8 @@ By the end of the week, students should be able to CRUD data in a table via SQL 
 
 ---
 
-## Week 7: May 6th through May 10th 
+# Week 7 
+## May 6th through May 10th 
 
 ### Overview - 
 Students should be able to construct an API using best practices. Students should also be able to use Docker and Virtualization to help them in the development process. By the end of week, students should be able to take a simple full-stack project and deploy it to a host.
@@ -255,7 +278,8 @@ Students should be able to construct an API using best practices. Students shoul
 
 ---
 
-## Week 8: May 13th through May 17th 
+# Week 8 
+## May 13th through May 17th 
 
 ### Overview - 
 Students should be able to explain how to set up authentication for a server as well as the key concepts of encryption and limitations for website security. Students should be able to use a third-party library to allow for data to be displayed in a visually clear and pleasing way. Students should also be able to explain key concepts that improve UX and help improved the UI layout. 
@@ -287,21 +311,24 @@ Students should be able to explain how to set up authentication for a server as 
 
 ---
 
-## Week 9: May 20th through May 24th 
+# Week 9 
+## May 20th through May 24th 
 
 ### Overview - 
 Java with Guest Instructor
 
 ---
 
-## Week 10: May 27th through May 31st 
+# Week 10 
+## May 27th through May 31st 
 
 ### Overview - 
 Java with Guest Instructor
 
 ---
 
-## Week 11: June 3rd through June 7th
+# Week 11 
+## June 3rd through June 7th
 
 ### Overview - 
 These weeks will mark the beginning of the Final Project. The class will be divided into groups (either randomly or to balance talent). The teams will determine who will be the lead amongst themselves and develop a hierarchy for work to be done. The teams will then meet with clients who will go through a discovery process to determine what the team will develop for the client. Due to the short time, the teams will work on 2day sprints. While the projects will be different, they will both/all test the same skillsets and require mastery of the same subjects to complete. 
@@ -333,7 +360,8 @@ These weeks will mark the beginning of the Final Project. The class will be divi
 
 ---
 
-## Week 12: June 10th through June 14th
+# Week 12 
+## June 10th through June 14th
 
 ### Overview - 
 This marks the final week of class and as such is the final week to work on the project. Teams should focus all work on the project and be able to provide updates and MVPs of different parts to the client as needed. 
@@ -364,11 +392,9 @@ This marks the final week of class and as such is the final week to work on the 
 
 ---
 
-# Useful Reference 
+# HTML Reference
 
-## HTML Elements
-
-### Semantic Elements -
+## Semantic Elements -
 If you're going to use semantic elements for part of your page, I recommend using them throughout the entirety of the project. 
 
 * Main - Any Main content usually one per page
@@ -379,7 +405,7 @@ If you're going to use semantic elements for part of your page, I recommend usin
 * Section - Any Section, usually inside a main. Second least used of these for me.
 * Article - Usually a sub section of Sections, least used of these for me.
 
-### Most Used Tags and Their Most Used Attributes
+## Most Used Tags and Their Most Used Attributes
 Most used for pretty much all elements are `class`, `id`, and `style`. Below will be the most used elements as well as any element specific attributes outside of the above three. If no additional attributes are listed, the main three are the only ones generally used
 * `<div></div>` - Containers in lieu of or addition to Semantic Tags
 * `<a></a>` - Used for internal or external links. `href` allows for the actual url or id to be linked to
@@ -396,7 +422,8 @@ Most used for pretty much all elements are `class`, `id`, and `style`. Below wil
 * `<button></button>` - Allows for a button to display
 * `<script></script>` - Allows for inline javascript or the loading of an external javascript file.
 
-### Most Used CSS and their Uses
+# CSS Reference
+## Most Used CSS and their Uses
 * `background` - Single declaration styling to set multiple background properties.
     * `background-attachment` - How the background image attaches to the screen.
     * `background-color` - Sets the background color.
@@ -444,4 +471,3 @@ Most used for pretty much all elements are `class`, `id`, and `style`. Below wil
 * `visibility` - Can make an item `visible` or `hidden`
 * `width` - Sets the width of an element.
 * `z-index` - Pushes elements in front of or behind other elements in respect to the user.
-
