@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparisons</title>
+
+    <script>
+        // Generic comparisons
+        var three = 3;
+        var threeString = "3";
+        var two = 2;
+        var twoString = "2";
+
+        //Greater Than
+        console.log("Line 15:",three > two); //?
+        console.log("Line 16:",two > two); //?
+
+        //Greater Than OR equal to
+        console.log("Line 19:",three > two); //?
+        console.log("Line 20:",two >= two); //?
+
+        //Less Than/ Less Than Equal To
+        console.log("Line 23:",three < two); //?
+        console.log("Line 24:",two <= two); //?
+
+        //equal to both ways
+        console.log("Line 27:",two == twoString); //?
+        console.log("Line 28:",two === twoString); //?
+
+        //not equal
+        console.log("Line 31:",two != three); //?
+        console.log("Line 32:",two !== twoString); //?
+        console.log("Line 33:",two != two); //?
+
+        //Comparing Strings
+        console.log("Line 36:",threeString > twoString); //?
+        console.log("Line 37:",threeString > two); //?
+        console.log("Line 38:","Hello" == "hello"); //?
+        console.log("Line 39:","Hello" > threeString); //?
+        
+        
+        //Multiple Comparisons in one
+        console.log("Line 43:",3 > 2 && 2 === "2"); // ?
+        console.log("Line 44:", 3> 2 || 2 === "2");
+        console.log("Line 45:", ( (3>2 || 3<2) && (2==3 || 2 >5) ) || (1>-1 && (5 >=5)) );
+
+
+        //Using them in an IF/Else setting
+
+        if(three === threeString){
+            console.log("Both are equal");
+        }
+        else if(3>2){
+            console.log("3>2");
+        }
+        else{
+            console.log("How did you get here?");
+        }
+
+        //using a switch
+        var switchVariable = 4;
+        switch (switchVariable){
+            case 4:
+                console.log("looks like you just have a 4 there");
+            case 3:                                                 //fallthrough example
+                console.log("looks like it's a 3");
+                break;
+            case 2:
+                console.log("Oh a 2 I see!");
+                break;
+            default:
+                console.log("The only numbers I know are 2,3 and 4 and it isn't one of those.")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

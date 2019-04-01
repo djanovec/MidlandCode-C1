@@ -1,0 +1,127 @@
+/* HELPERS */
+body{
+    margin: 0;
+}
+.text-center{
+    text-align: center;
+}
+.row-wrap{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.column-wrap{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.full-width{
+    width: 100%;
+}
+.flex-grow{
+    flex-grow: 1;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+/* CONTAINER */
+.side-container{
+    background-color: orange;
+    flex-basis: calc(30% - 10px);
+    min-width: 137px;
+    margin: 5px;
+}
+
+.side-menu{
+    margin: 5px;
+    background-color: aquamarine;
+    flex: 0 0 110px;
+}
+
+.main-container{
+    background-color: red;
+    flex-basis: calc(70% - 10px);
+    min-width: 320px;
+    margin: 5px;
+}
+
+
+.footer{
+    height: 70px;
+    line-height: 70px;
+    background-color: black;
+    color: white;
+}
+
+.page-container{
+    margin: 10px 0px;
+    background-color: violet;
+}
+/* MENU */
+.top-link{
+    height: 40px;
+    flex-basis: calc(100% / 3);
+    line-height: 40px;
+}
+.top-link:not(.active){
+    background-color: blue;
+    color: white;
+}
+.top-link:hover:not(.active){
+    background-color: white;
+    color: blue;
+}
+.active{
+    background-color: darkblue;
+    color: white;
+}
+a{
+    text-decoration: none
+}
+
+/* CONTENT */
+
+.main-content{
+    justify-content: space-between;
+    flex-basis: 200px;
+    min-height: 200px;
+    background-color: lightgray;
+    margin: 5px;
+}
+.aside-content{
+    flex-basis: 100px;
+    background-color: lightblue;
+    margin: 5px;
+}
+.main-content, .aside-content{
+    padding: 5px;
+}
+
+.side-menu-content{
+    background-color: antiquewhite;
+    flex: 0 0 30px;
+    margin: 3px;
+    line-height: 30px;
+}
+
+.item-photo{
+    margin: 0 5px;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+/* FORM */
+.form-container{
+    flex-basis: 80%;
+    margin: auto;
+    background-color: bisque;
+}
+.input-label, .radio-container, .text-box, .input{
+    margin: 5px 10px 0 10px;
+}
+.text-box{
+    height: 100px;
+}
