@@ -113,6 +113,10 @@ a{
     float: left;
 }
 
+.item-photo:hover{
+    transform: scale(1.1);
+}
+
 /* FORM */
 .form-container{
     flex-basis: 80%;

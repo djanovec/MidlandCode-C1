@@ -18,13 +18,23 @@
     console.warn("WARNING WARNING");
     console.info("Here's some information for you!");
     //  alert('This is an alert!');
-    //  prompt("This is a prompt!");
-
+     var thePrompt = prompt("Enter a random string of letters...");
+    console.log(thePrompt);
     //  Variable Declaration
+    // const thisIsAConstant = 1;
+    // var yearNumber;
     var yearNumber = 2018;
     var yearString = "2018"; //not the same as yearNumber
     console.log(yearNumber);
     console.log(yearString);
+    // PRIMITIVE TYPES
+    // number
+    // string
+    // boolean
+    // undefined
+    
+    // SAVES A REFERENCE POINT
+    // object
 
     var marriedBoolean = true;
     var marriedString = "true"; //  Not the same as marriedBoolean
@@ -42,7 +52,7 @@
     //  Zero Indexed Remember this!
 
 
-    var firstDog = dogs[0];
+    var firstDog = dogs[0]; // dogs[0] --> "Husky"
     var secondBear = typesOfBears[1];
 
     var me = ["Mike", "Truax"];
@@ -52,13 +62,13 @@
     //  Same as var us = [["Mike", "Truax"], ["Emily", "Truax"]]
     console.log(me[0]);//Mike
     console.log(wife[0]);//Emily
-    console.log(us[0][0]); //Mike
+    console.log(us[0][0]) //Mike us[0] -> [Mike, Truax][0]
 
 
     //Arrays don't care about type
     var variedArray = [1,2,true,[4,5],6,"number 7"];
 
-    //Onjects
+    //Objects
     var helloObject = {
         greeting: "Hello",
         target: "World"
@@ -75,6 +85,7 @@
         }
     };
     johnnyDangerously.director = "Amy Heckerling";
+
     console.log(johnnyDangerously);
 
     //simple math
@@ -84,7 +95,7 @@
     var five = 2+3;
     var alsoFive = two+three;
 
-    var six = 2*6;
+    var six = 2*3;
     var alsoSix = two*three;
 
     three++;
@@ -92,8 +103,8 @@
     three--;
     console.log(three);
 
-    console.log(six/three);
-    console.log(six-three);
+    console.log(six/three); // 2
+    console.log(six-three); // 3
 
     //MODULO!
     var sixModuleThree = 6%3;
@@ -102,9 +113,9 @@
     //String addition
     var firstName = "Mike";
     var lastName = "Truax";
-    var fullName = firstName+lastName;
+    var fullName = firstName+lastName; // "MikeTruax"
     var fullNameWithSpace = firstName+ " " + lastName + " is my name";
-    var fullNameStringLiteral = `${firstName} ${lastName} is my name`
+    var fullNameStringLiteral = `${firstName} ${lastName} is my name`;
 
 </script>
 

@@ -10,33 +10,41 @@
             console.log(i)
         }
 // Careful of infinite loops
-//        for(var i = 1; i>0; i++){
-//            console.log(i)
-//        }
+    //    for(var i = 1; i>0; i++){
+    //        console.log(i)
+    //    }
 
         //nested for loops
         //scope
-        for(var i = 0; i<10; i++){
-            for(var j=0; j<6; j++){
+        for(var i = 0; i<10; i++){ // 0-9
+            for(var j=0; j<6; j++){ // 0-5
                 console.log(`i:${i}, j:${j}`)
             }
         }
 
-//        while loops
+        var a = [4,7,5,9,10];
+        for(var i = 0; i < a.length; i++){ 
+            console.log(a[i], i) // what's i? i = 0 therefore a[0]
+        }
+        
+        //      while loops
         var whileVariable = 10;
-        while(whileVariable >0){
+        while(whileVariable > 0){
             console.log("First while Loop:"+whileVariable);
             whileVariable = whileVariable-1; // or whileVariable--;
         }
+        console.log(whileVariable);
         while(whileVariable >10){
             console.log("Second while Loop:"+ whileVariable);
             whileVariable = whileVariable-1; // or whileVariable--;
         }
-
+        whileVariable = 12;
         do{
             console.log("Do while Loop:"+ whileVariable);
             whileVariable = whileVariable-1; // or whileVariable--;
-        } while (whileVariable >10);
+            // variableName *= 10
+        } while (whileVariable > 10);
+        console.log(whileVariable);
 
     </script>
 </head>
