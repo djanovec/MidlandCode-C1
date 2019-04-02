@@ -4,7 +4,7 @@
 * Make a function called pow that accepts arguments x and y and returns the value of x to the y power
 * Write a function that checks to see if the word as an argument is a palindrome (case insensitive) and log the result to the console.
 * Write a function that accepts an array of banned words and an array of words. If any of the banned words appear in the array of words (case sensitive), replace them with "REDACTED", do this without any prototypical functions
-* Write a function that accepts two arguments (names can be changed):a and b. Cycle through all numbers between a and b (inclusive) and if the number is divisible by 2 log "Fizz" if the number is divisible by 3 log "Buzz" if it is divisible by both log "FizzBuzz" otherwise log the number. if a==b log nothing, if b > a count down otherwise count up
+* Write a function that accepts two arguments (names can be changed):a and b. Cycle through all numbers between a and b (inclusive) and if the number is divisible by 2 log "Fizz" if the number is divisible by 3 log "Buzz" if it is divisible by both log "FizzBuzz" otherwise log the number. if a==b log nothing, if b < a count down otherwise count up
 * Write a function that takes a day month and year (in whatever format you choose) and return what day that was. Try doing this both WITH and WITHOUT the use of built in libraries.
 
 ### BONUS: 
