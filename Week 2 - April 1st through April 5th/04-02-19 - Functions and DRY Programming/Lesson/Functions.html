@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions Are Fun(ctional)</title>
+
+    <script>
+        //Generic Overview:
+//        function thisIsAFunction(parameter1, parameter2)
+//        {
+//            this is where you do things!
+//
+//            return (your return value);
+//
+//        }
+//        thisIsAFunction(argument1, argument2);
+
+
+
+        function greeting(name, age, country){
+            if(age > 40){
+                console.log("Greetings "+ name);
+            }
+            else{
+                console.log(`What's up ${name}?`)
+            }
+            console.log(" How long has it been since you've been back home to "+country+"?")
+        }
+
+        //Calling a function
+        greeting("Mike", 36, "United States");
+
+        //Calling a function with incorrect number of arguments.
+        greeting("Mike", 36);
+
+
+        function poorNaming(a,b,c){
+            if(a > 20){
+                console.log("The thing");
+            }
+            if (b<c){
+                console.info("We're going to get in trouble.");
+            }
+        }
+
+
+        var mike = {
+            name: {
+                first:"Mike", last:"Truax"
+            },
+            greeting: function(name){
+                console.log(`Nice to meet you ${name}, my name is ${this.name.first} ${this.name.last}`)
+            },
+            hobbies: ["sports", "video games", "cooking"]
+        };
+        //call function from console
+        console.log("----------------------------------");
+
+        var variableOne = "First Variable";
+
+        function scope(){
+            var variableTwo = "Second Variable";
+            console.log(variableOne, variableTwo)
+        }
+        scope();
+//        console.log(variableTwo); //would error out the program
+
+        function scopeRoundTwo(){
+            var variableOne = "Not the First Variable or is it?";
+            console.log(variableOne);
+        }
+        scopeRoundTwo();
+        console.log(variableOne);
+
+        function scopeRoundThree(){
+            variableOne = "Not the First Variable or is it?";
+            console.log(variableOne);
+        }
+        scopeRoundThree();
+        console.log(variableOne);
+
+        function returningValues(a,b){
+            return a+b;
+            return a-b; // Will never appear and a lot IDEs will warn you of that.
+        }
+        console.log("Returning Values: ",returningValues(1,2));
+        console.log("----------------------------------");
+
+        function returningConditionalValues(a,b){
+            if(a>=b){
+                return a;
+            }
+            return b;
+
+            //or return a>=b ? a: b;
+        }
+
+
+        //Recursion
+
+        //Find the nth element in the fibonacci sequence
+        function fibonacci(num){
+            var a=1, b=0, temp;
+            while (num >= 0){
+                temp = a;
+                a = a+b;
+                b=temp;
+            num--;
+            }
+            return b;
+        }
+
+        //recursive version of the sequence
+        function fibonacciRecursive(num){
+         if(num <=1) return 1;
+
+         return fibonacciRecursive(num-1)+fibonacciRecursive(num-2);
+        }
+
+        console.log("Fibonacci:",fibonacci(6));
+        console.log("Recursive Fibonacci:", fibonacciRecursive(6));
+        console.log("----------------------------------");
+        //Closure
+
+        function multiplier(a){
+            var timesCalled = 0;
+            return function(b){
+                timesCalled++;
+                console.log(`TimesCalled with multiplier ${a}: ${timesCalled}`);
+                console.log("Result: ",a*b);
+            }
+        }
+        var timesTwo = multiplier(2);
+        var timesThree = multiplier(3);
+        timesTwo(2);
+        timesThree(2);
+        timesTwo(2);
+        multiplier(2)(8);
+    </script>
+
+
+</head>
+<body>
+
+
+</body>
+</html>
