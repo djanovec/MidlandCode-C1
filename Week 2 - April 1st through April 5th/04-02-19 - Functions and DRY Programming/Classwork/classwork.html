@@ -8,10 +8,133 @@
 </head>
 <body>
     <script>
+        // // ABSOLUTE VALUE FUNCTION
+        // function absValue(num){
+        //     if(typeof num !== "number"){
+        //         return "That is not a number"
+        //     }
+        //     return num >= 0 ? num : 0-num;
+        //     // if(num >= 0 ){
+        //     //     return num;
+        //     // }  else{
+        //     //     return 0-num;
+        //     // }  
+        // }
+        // var absv = absValue("tacocat");
+
+        // console.log(absv);
+        // console.log(absValue(-20));
+        // // POWER FUNCTION
+        // function powFunction(baseNum,toPower){
+        // //    return baseNum**toPower;
+        //     var startingNum = baseNum;
+        //     for(var i = 2; i <= toPower; i++){
+        //         baseNum *= startingNum; // baseNum = startingNum * baseNum;
+        //     }
+        //     return baseNum;
+        // }
+        // console.log(powFunction(13,2));
+        // console.log(powFunction(2,8));
+
+
+        // // PALINDROME
+        // function isPalindrome(phrase){
+        //     phrase = phrase.toUpperCase().split(" ").join("");
+        //     var reverse = phrase;
+        //     reverse = reverse.split("").reverse().join("")
+        //     return phrase == reverse;
+        // }
+        // console.log(isPalindrome("Apple"))
+        // console.log(isPalindrome("Taco cat"));
+        // console.log(isPalindrome("dAD"));
+
+
+        // // BANNED WORDS
+        // var words = ["apple", "banana", "orange", "kiwi"];
+        // var bannedWords = ["watermelon", "kiwano", "passion fruit", "orange"];
+        // console.log(words);
+        // function redact(toCheck, banned){
+        //     toCheck = toCheck.slice();
+        //     for(var i = 0; i < toCheck.length; i++){
+        //         for(var j= 0; j < banned.length; j++){
+        //             if(toCheck[i] == banned[j]){
+        //                 toCheck[i] = "REDACTED";
+        //             }
+        //         }
+        //     }
+        //     return toCheck;
+        // }
+        // var redactedWords = redact(words, bannedWords);
+        // console.log(redactedWords);
+        
+        // console.log(words);
+
+        // FIZZBUZZ
+        function fizzBuzz(num){
+            if(num % 6 == 0 ){
+                        console.log(num, "FizzBuzz");
+                    }
+                    else if(num% 2 == 0){
+                        console.log(num, "Fizz");
+                    }
+                    else if(num% 3 == 0){
+                        console.log(num, "Buzz");
+                    }
+                    else{
+                        console.log(num);
+                    }
+        }
+
+        function fizzBuzzLoop(start, end){
+            if(typeof start !== "number"|| typeof end !== "number" || start == end){
+                return;
+            }
+            else if(start > end){
+                for(var i = start; i >= end; i--){
+                    fizzBuzz(i);
+                }
+            }
+            else{
+                for(var i = start; i <= end; i++){
+                    fizzBuzz(i);
+                }
+            }
+        }
+        fizzBuzzLoop(10,15);
+        fizzBuzzLoop(15,10);
+        fizzBuzzLoop(10,10);
+        fizzBuzzLoop("1", "10");
+
+     // DAY MONTH YEAR WITHOUT LIBRARY
+
+        // f= k+ [(13*m-1)/5] + D + [D/4] + [C/4] - 2*C
+        // Where k is the day of the month 
+        // m is the month number (startin with march = 1  and feb = 12 and jan = 11 of previous year
+        // D is the last two digits of the year
+        // C is the century (First two digits of the year)
+        // 04/02/2019
+        // f = 2 + [(13*2 - 1)/5] + 19 + (19/4) + (20/4) - 2*20
+        // f = 2 +      5          + 19+ 4.75   + 5 - 40
+        // f = -4.25
+        // f = -5 2 
+        // SUNDAY 0 monday 1 tuesday 2
+
+        
+        // THEN round down f/7 taking the remainder 0 is sunday and 6 is saturday
+        // IF f is negative then it's f % -7 + 7
         
         
+        // DAY MONTH YEAR WITH LIBRARY
+        // var days = ["U", "M", "T", "W", "R", "F", "S"]
+        // var d = new Date("April 02, 2019");
+        // console.log(days[d.getDay()]);
         
         
+        // RECURSIVE POW FUNCTION
+
+
+        // EXTRA BONUS - CLOSURE
+
     </script>
     
 </body>
