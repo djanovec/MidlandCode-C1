@@ -13,38 +13,38 @@ else{
 }
 
 if(x % 3 == 0){
-    console.log("X is evenly divisible by 2")
+    console.log("X is evenly divisible by 3")
 }
 else{
-    console.log("X is not evenly divisible by 2")
+    console.log("X is not evenly divisible by 3")
 }
 
 if(x % 4 == 0){
-    console.log("X is evenly divisible by 2")
+    console.log("X is evenly divisible by 4")
 }
 else{
-    console.log("X is not evenly divisible by 2")
+    console.log("X is not evenly divisible by 4")
 }
 
 if(x % 5 == 0){
-    console.log("X is evenly divisible by 2")
+    console.log("X is evenly divisible by 5")
 }
 else{
-    console.log("X is not evenly divisible by 2")
+    console.log("X is not evenly divisible by 5")
 }
 
 if(x % 6 == 0){
-    console.log("X is evenly divisible by 2")
+    console.log("X is evenly divisible by 6")
 }
 else{
-    console.log("X is not evenly divisible by 2")
+    console.log("X is not evenly divisible by 6")
 }
 
 if(x % 7 == 0){
-    console.log("X is evenly divisible by 2")
+    console.log("X is evenly divisible by 7")
 }
 else{
-    console.log("X is not evenly divisible by 2")
+    console.log("X is not evenly divisible by 7")
 }
 
 ```

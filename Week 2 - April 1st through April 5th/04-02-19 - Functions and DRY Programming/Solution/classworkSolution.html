@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+
+        //BASIC SOLUTION
+        var inputNumber = prompt("Enter a number between 1 and 100 (inclusive)");
+        var inputName = prompt("Enter your first name");
+        if (inputNumber % 2 == 0) {
+            console.log("Your number is even!");
+        }
+        else {
+            console.log("Your number is odd!");
+        }
+        if (inputNumber >= 50) {
+            console.log("Your number is higher than 50");
+        }
+        else {
+            console.log("Your number is less than or equal to 50");
+        }
+        if (inputNumber % 5 === 0 && inputNumber % 3 === 0) {
+            console.log("Your number is divisible by both 5 and 3");
+        }
+        //All numbers before
+        for (var i = 1; i < inputNumber; i++) {
+            console.log(i)
+        }
+        for (var i = 100; i > inputNumber; i--) {
+            console.log(i);
+        }
+        if (inputName === "Mike") {
+            alert("That's my favorite name!");
+        }
+        else {
+            alert("Hi " + inputName)
+        }
+        console.log(inputName.split().reverse().join());
+    //First Bonus
+//    var inputNumberBonusBonus = prompt("BONUS: Enter a number between 1 and 100 (inclusive)");
+//    var inputNameBonusBonus = prompt("BONUS: Enter your name").toLowerCase();
+//    if(inputNumberBonus <1 || inputNumberBonus >100){
+//        console.error("You can't follow directions very well can you?")
+//    }
+//    else {
+//        if (inputNumberBonus % 2 == 0) {
+//            console.log("Your number is even!");
+//        }
+//        else {
+//            console.log("Your number is odd!");
+//        }
+//
+//        if (inputNumberBonus >= 50) {
+//            console.log("Your number is higher than 50");
+//        }
+//        else {
+//            console.log("Your number is less than or equal to 50");
+//        }
+//
+//        if (inputNumberBonus % 5 === 0 && inputNumberBonus % 3 === 0) {
+//            console.log("Your number is divisible by both 5 and 3");
+//        }
+//
+//        //All numbers before
+//        for (var i = 1; i < inputNumberBonus; i++) {
+//            console.log(i)
+//        }
+//        for (var i = 100; i > inputNumberBonus; i--) {
+//            console.log(i);
+//        }
+//    }
+//
+//    if(inputName.split()[0] === "mike"){
+//        alert("That's my favorite name!");
+//    }
+//    else {
+//        alert("Hi "+inputName)
+//    }
+//    console.log(inputName.split().reverse().join());
+
+
+//Extra Bonus
+//        var inputNumberExtraBonus = prompt("BONUS: Enter a number between 1 and 100 (inclusive)");
+//        var inputNameExtraBonus = prompt("BONUS: Enter your name");
+//        if (inputNumberExtraBonus < 1 || inputNumberExtraBonus >100) {
+//            console.error("You can't follow directions very well can you?")
+//        } else {
+//
+//            (inputNumberExtraBonus % 2 == 0) ? console.log("Your number is even!") : console.log("Your number is odd!");
+//
+//
+//            (inputNumberExtraBonus >= 50) ?
+//                console.log("Your number is higher than 50") : console.log("Your number is less than or equal to 50");
+//
+//
+//            (inputNumberExtraBonus % 5 === 0 && inputNumberExtraBonus % 3 === 0) ? console.log("Your number is divisible by both 5 and 3") : '';
+//
+//
+//            //All numbers before
+//            for (var i = 1; i < inputNumberExtraBonus; i++) {
+//                console.log(i)
+//            }
+//            for (var i = 100; i > inputNumberExtraBonus; i--) {
+//                console.log(i);
+//            }
+//
+//        }
+//        (inputNameExtraBonus.slice().split(' ')[0].toLowerCase() === "mike") ?
+//            alert("That's my favorite name!") :
+//            alert("Hi "+inputNameExtraBonus);
+//
+//        console.log(inputNameExtraBonus.split('').reverse().join(''));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
