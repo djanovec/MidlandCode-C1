@@ -29,7 +29,6 @@ function helloWorld(){
 }
 
 helloWorld();
-
 (function(){
     var alsoYou = prompt("Name again please");
     var alsoYouBackwards = you.split('').reverse().join('');
