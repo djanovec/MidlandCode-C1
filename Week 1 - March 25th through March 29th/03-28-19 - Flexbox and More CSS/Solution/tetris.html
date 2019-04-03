@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Does Anyone Pay Attention To These?</title>
+
+    <style>
+        div{
+            background-color: black;
+            float: left;
+            width: 10%;
+            padding-top: 10%;
+        }
+        .black{
+            background-color: black;
+        }
+        div:not(.black){
+            box-shadow: inset -1px -1px 20px darkslategrey;
+        }
+        .cyan{
+            background-color: cyan;
+        }
+        .green{
+            background-color:#00FF00;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .orange{
+            background-color: #FFa500;
+        }
+        .purple{
+            background-color: mediumpurple;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .left, .right{
+            width: calc(10% - 1px);
+        }
+        .top.bottom{
+            padding-top: calc(10% - 2px);
+        }
+        .top, .bottom{
+            padding-top: calc(10% - 1px);
+        }
+  
+        .left.right{
+            width: calc(10% - 2px);
+        }
+        .top{
+            border-top: 1px solid black
+        }
+        .bottom{
+            border-bottom: 1px solid black
+        }
+        .right{
+            border-right: 1px solid black
+        }
+        .left{
+            border-left: 1px solid black
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="cyan top bottom left"></div>
+<div class="cyan top bottom"></div>
+<div class="cyan top bottom"></div>
+<div class="cyan top bottom right"></div>
+<div class="green top left right"></div>
+<div class="yellow top left bottom"></div>
+<div class="yellow top right bottom"></div>
+<div class="purple top left bottom"></div>
+<div class="purple top right"></div>
+<div class="black"></div>
+<div class="blue top left"></div>
+<div class="blue top right"></div>
+<div class="orange top left right"></div>
+<div class="black"></div>
+<div class="green left bottom"></div>
+<div class="green top right"></div>
+<div class="red top left bottom"></div>
+<div class="red top right"></div>
+<div class ="purple left bottom right"></div>
+<div class="black"></div>
+<div class="blue bottom left"></div>
+<div class="blue bottom right"></div>
+<div class ="orange left bottom"></div>
+<div class ="orange top bottom"></div>
+<div class ="orange top right bottom"></div>
+<div class ="green left right bottom"></div>
+<div class="black"></div>
+<div class="red left bottom"></div>
+<div class="red top right bottom"></div>
+<div class="orange left top bottom"></div>
+
+
+
+
+
+</body>
+</html>

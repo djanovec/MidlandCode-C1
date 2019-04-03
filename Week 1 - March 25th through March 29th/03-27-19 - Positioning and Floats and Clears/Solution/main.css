@@ -1,0 +1,22 @@
+div{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    font-size: 100px;
+    text-align: center;
+}
+
+div:nth-child(even){
+    background-color: gray;
+}
+
+div:nth-child(odd){
+    background-color: white;
+}
+
+div:nth-child(3n+1){
+    margin-left: calc(50% - 150px);
+}
+div:nth-child(n+4):nth-child(-n+6){
+    background-color: green;
+}

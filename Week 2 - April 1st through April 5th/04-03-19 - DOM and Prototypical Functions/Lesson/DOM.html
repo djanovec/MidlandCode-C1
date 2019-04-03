@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>What is the DOM?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        div{
+            width: 90%;
+            margin: 10px auto;
+            background-color: orange;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+    <script>console.log(document.querySelectorAll('.someDiv'))</script>
+</head>
+<body>
+    <div class="someDiv">This is a div!</div>
+    <div class="someDiv">This is also a div!</div>
+    <div class="someDiv" id="divID1">This is a third div!</div>
+    <div class="someDiv anotherDiv">
+        <input type="text" value="example text" name="someInput">
+    </div>
+    
+    <button onclick="changeColors()">Change Colors!</button>
+
+    <script src="DOM.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+nav, footer, header{
+    display: block;
+}
+
+/*HELPERS*/
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.full-width{
+    width: 100%
+}
+
+.clear-both{
+    clear:both;
+}
+
+/*CONTAINERS*/
+
+.page-container{
+    width: 90%;
+    margin: auto;
+}
+
+.header, .footer{
+    background-color: gray;
+    margin: 0;
+}
+
+
+.header{
+    height: 75px;
+}
+
+.footer{
+    border: 1px solid black;
+    height: 100px;
+}
+
+.banner{
+    height: inherit;
+}
+
+.section{
+    width: 100%;
+}
+
+
+.sidebar{
+    width: 30%;
+}
+.sidebar h3{
+    padding-left: 20px;
+}
+.content{
+    width: 70%;
+}
+
+/*MENUS*/
+
+.menu{
+    background-color: whitesmoke;
+}
+
+.link, .side-link{
+    text-decoration: none;
+    color: black;
+
+}
+
+.link{
+    width: 25%;
+}
+
+.link:hover:not(.active){
+    color: white;
+    background-color: black;
+}
+
+.side-link:hover{
+    background-color: lightgrey;
+}
+
+.active{
+    background-color: gray;
+    color: whitesmoke;
+}
+
+.sideMenu{
+    list-style-type: circle;
+}
+.side-link{
+    padding-left: 20%;
+    margin: 5px;
+}
+
+
+/*IMAGES*/
+
+.logo{
+    height: 75px;
+}
+
+.content img{
+    margin: 10px;
+    height: 100px;
+}
+
+.fish-background{
+    background-size: auto 100px;
+    background-position: center;
+    background-repeat: round;
+    background-image: url('http://www.pbs.org/wnet/nature/files/2012/05/Oncorhynchus_nerka-1-610x272.jpg');
+}
+
+
+/*TYPOGRAPHY*/
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.center{
+    text-align: center;
+}
+
+.banner-headline, .footer-headline{
+    letter-spacing: 3px;
+}
+
+.banner-headline{
+    text-shadow: black 2px 2px;
+    padding-right: 50px;
+    color: white;
+}
+
+.footer-headline{
+    /* color: black; */
+    text-shadow: white 1px 1px;
+}

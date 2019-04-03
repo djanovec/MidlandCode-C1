@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparisons</title>
+    <script src="./test.js"></script>
+    <script type="text/javascript">
+        var inputFromUser = prompt("Give me a thing")
+        
+        // Generic comparisons
+        var three = 3;
+        var threeString = "3";
+        var two = 2;
+        var twoString = "2";
+
+        //Greater Than
+        console.log("Line 15:",three > two); // true
+        console.log("Line 16:",two > two); // false
+
+        //Greater Than OR equal to
+        console.log("Line 19:",three > two); // true
+        console.log("Line 20:",two >= two); // true
+
+        //Less Than/ Less Than Equal To
+        console.log("Line 23:",three == two); // false
+        console.log("Line 24:",two <= two); // true
+
+        //equal to both ways
+        console.log("Line 27:", two == twoString); // true
+        console.log("Line 28:", two === twoString); // false
+
+        //not equal
+        console.log("Line 31:",two != three); // true
+        console.log("Line 32:",two !== twoString); // true
+        console.log("Line 33:",two != two); // false
+
+        //Comparing Strings
+        console.log("Line 36:",threeString > twoString); // true
+        console.log("Line 37:",threeString > two); // true
+        console.log("Line 38:","Hello" == "hello"); // false
+        console.log("Line 39:","Hello" > threeString); // true
+        
+        
+        //Multiple Comparisons in one
+        console.log("Line 43:",3 > 2 && 2 === "2"); // false
+        console.log("Line 44:", 3 > 2 || 2 === "2"); // true
+        console.log("Line 45:", ( (3>2 || 3<2) && (2==3 || 2 >5) ) || (1>-1 && (5 >=5)) );
+
+
+        //Using them in an IF/Else setting
+
+        if(three === threeString){
+            console.log("Both are equal");
+        }
+
+        else if(3>2){
+            console.log("3>2");
+        }
+        else{
+            console.log("How did you get here?");
+        }
+
+
+        //using a switch
+        var switchVariable = [1,2];
+        switch (switchVariable){
+            case {mike: "Mike"}:
+                console.log("looks like you just have a 4 there");
+                break;
+            case "apple":                                                 //fallthrough example
+                console.log("looks like it's a 3");
+                break;
+            case "APPLE":
+                console.log("Oh a 2 I see!");
+                break;
+            default:
+                console.log("The only numbers I know are 2,3 and 4 and it isn't one of those.")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

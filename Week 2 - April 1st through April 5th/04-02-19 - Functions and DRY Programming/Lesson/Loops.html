@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
+
+    <script>
+        //Loops it is!
+        for(var i = 0; i<10; i++){
+            console.log(i)
+        }
+// Careful of infinite loops
+//        for(var i = 1; i>0; i++){
+//            console.log(i)
+//        }
+
+        //nested for loops
+        //scope
+        for(var i = 0; i<10; i++){
+            for(var j=0; j<6; j++){
+                console.log(`i:${i}, j:${j}`)
+            }
+        }
+
+//        while loops
+        var whileVariable = 10;
+        while(whileVariable >0){
+            console.log("First while Loop:"+whileVariable);
+            whileVariable = whileVariable-1; // or whileVariable--;
+        }
+        while(whileVariable >10){
+            console.log("Second while Loop:"+ whileVariable);
+            whileVariable = whileVariable-1; // or whileVariable--;
+        }
+
+        do{
+            console.log("Do while Loop:"+ whileVariable);
+            whileVariable = whileVariable-1; // or whileVariable--;
+        } while (whileVariable >10);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

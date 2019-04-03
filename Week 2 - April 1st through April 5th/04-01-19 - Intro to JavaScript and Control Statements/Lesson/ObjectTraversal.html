@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Traversal</title>
+    <script>
+        var mike = {
+            name: {
+                first: "Mike",
+                middle: "Secret",
+                last: "Truax"
+            },
+            age: 36,
+            parents: {
+                father: {
+                    name: {
+                        first: "Glen",
+                        last: "Truax"
+                    }
+                },
+                mother: {
+                    name: {
+                        first: "Sue",
+                        last: "Truax"
+                    }
+                }
+            },
+            heavilyTattooed: true,
+            hobbies: ["games", "coding", "soccer", "baking"],
+            favoriteMovies: ['Spring Summer Fall Winter and Spring', 'Pan\'s Labyrinth', 'Bakemono no Ko'], //escape character
+            partner: {
+                name: {
+                    first: "Emily",
+                    middle: "AlsoSecret",
+                    last: "Truax"
+                },
+                age: 36,
+                parents: {
+                    father: {
+                        name: {
+                            first: "Carl",
+                            last: "LastNameRedacted"
+                        }
+                    },
+                    mother: {
+                        name: {
+                            first: "Maureen",
+                            last: "LastNameRedacted"
+                        }
+                    }
+                },
+                hobbies: ["games", "crochet", "soccer", "baking"],
+                favoriteMovies: ['Quiz Show', 'Pan\'s Labyrinth', 'Bakemono no Ko'], //escape character
+                partner:{
+                    name: {
+                        first: "Mike",
+                        middle: "Secret",
+                        last: "Truax"
+                    },
+                    age: 36,
+                    parents: {
+                        father: {
+                            name: {
+                                first: "Glen",
+                                last: "Truax"
+                            }
+                        },
+                        mother: {
+                            name: {
+                                first: "Sue",
+                                last: "Truax"
+                            }
+                        }
+                    }
+                }
+            }
+        };
+        console.log(mike);
+        console.log(mike.age, mike["age"]);
+    </script>
+</head>
+<body>
+
+</body>
+
+</html>

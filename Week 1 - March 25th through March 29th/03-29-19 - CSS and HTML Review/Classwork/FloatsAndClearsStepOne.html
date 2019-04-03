@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FloatsAndClears</title>
+    <style>
+        .left, .right {
+            height: 40px;
+            border: 1px solid black;
+            margin: 2px;
+            color: white;
+            line-height: 40px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .left {
+            background-color: #FFa500;
+            width: calc(75% - 8px);
+        }
+
+        .right {
+            background-color: #0088FF;
+            width: calc(25% - 8px);
+        }
+
+        button {
+            cursor: pointer;
+            display: inline-block;
+            width: calc(40% - 5px);
+            margin: 10px 5%;
+        }
+    </style>
+</head>
+<body>
+<p class="center" id="floatDesc">Look at the divs below. Currently they don't have any float attribute. When you click
+    the button they'll add float:left to the L columns and float: right to the right columns.
+    Before you click the button try to figure out where they'll go and draw it on a piece of paper if needed to check if
+    you're right.
+</p>
+<p class="center" id="floatDescPost" style="display: none">Did they do what you thought they would? If so, awesome! If
+    not, no worries. Remember that floating elements will try to fill either the available space on the "line" directly
+    above itself OR start a new "line" if there isn't enough room.
+</p>
+
+<button id="addFloat" onclick="changeFloat('add')">Add Float</button>
+<button id="resetFloat" onclick="changeFloat('none')">Reset Float</button>
+
+<div class="right">R-1</div>
+<div class="left">L-1</div>
+<div class="right">R-2</div>
+<div class="right">R-3</div>
+<div class="left">L-2</div>
+<div class="left">L-3</div>
+<div class="left">L-4</div>
+<div class="right">R-4</div>
+<div class="left">L-5</div>
+<div class="left">L-6</div>
+<div class="right">R-5</div>
+<div class="right">R-6</div>
+
+<script>
+    const floatRight = document.getElementsByClassName('right');
+    const floatLeft = document.getElementsByClassName('left');
+    function changeFloat(val) {
+        for (var i = 0; i < floatRight.length; i++) {
+            floatRight[i].style.float = val === 'none' ? 'none' : 'right'
+        }
+        for (var j = 0; j < floatLeft.length; j++) {
+            floatLeft[j].style.float = val === 'none' ? 'none' : 'left'
+        }
+        document.getElementById('floatDesc').style.display = val === 'none' ? 'block' : 'none';
+        document.getElementById('floatDescPost').style.display = val === 'add' ? 'block' : 'none';
+
+    }
+
+
+</script>
+</body>
+</html>

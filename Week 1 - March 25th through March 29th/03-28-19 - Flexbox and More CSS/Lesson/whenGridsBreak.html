@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>When Grids Attack</title>
+
+    <style>
+        div:not(.container){
+            background-color: #FFa500;
+            height: 275px;
+            padding: 5px;
+        }
+        div:nth-child(odd){
+            background-color: #0088FF;
+        }
+        .center {
+            text-align: center;
+        }
+
+        .third, .half, .quarter, .three-quarters, .two-thirds {
+            float: left;
+            border: 1px solid black;
+        }
+
+        .third {
+            width: calc((100% / 3) - 12px);
+        }
+
+        .two-thirds {
+            width: calc((100% / 3) * 2 - 12px);
+        }
+
+        .half {
+            width: calc(50% - 12px);
+        }
+
+        .quarter {
+            width: calc(25% - 12px);
+        }
+
+        .three-quarters {
+            width: calc(75% - 12px);
+        }
+        .full{
+            float: left;
+            width: 100%
+        }
+
+    </style>
+</head>
+<body>
+<div class="full center container">
+    <input type="radio" name="display" value="static" id="static"
+           onclick="heightChange(event)" checked="checked"><label for="responsive">Static Height</label>
+        <input type="radio" name="display" value="responsive" id="responsive"
+               onclick="heightChange(event)"><label for="responsive">Responsive Height</label>
+</div>
+<div class="third"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="third">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="third">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="two-thirds">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="third">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="third">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="two-thirds">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="two-thirds">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="two-thirds">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="half">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="half">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="half">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="quarter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="quarter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="three-quarters">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque
+    faucibus feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor.
+    Integer vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros.
+    Aenean pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="quarter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="quarter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="quarter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+<div class="quarter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor at neque faucibus
+    feugiat. Vestibulum lobortis efficitur ipsum vitae aliquet. Phasellus molestie aliquet metus id tempor. Integer
+    vulputate ex ac dolor facilisis, in dignissim nunc eleifend. Sed et felis ligula. Mauris eget nulla eros. Aenean
+    pharetra semper lobortis. Donec rutrum sed justo suscipit pretium. Vestibulum scelerisque ornare ligula.
+</div>
+
+<script>
+    var divs = document.querySelectorAll('div:not(.container)');
+
+    function heightChange(e){
+        console.log(e.target, e.target.value);
+        divs.forEach(function (div){
+                div.style.height = e.target.value !== 'responsive' ? 275+'px' : 'auto';
+        });
+
+    }
+
+</script>
+</body>
+</html>
