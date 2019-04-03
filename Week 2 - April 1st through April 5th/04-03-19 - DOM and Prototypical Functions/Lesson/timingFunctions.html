@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color: blue; transition: background-color 250ms ease-in;">
+    <h1 style="text-align: center; ">Every 2 seconds the background color will change</h1>
+    <h2 id="disappear" style="text-align: center; transition: opacity 500ms linear;">In <span id="timeLeft">10</span> seconds, this text will fade away...</h3>
+    <script>
+    var timer = 9; 
+    window.setTimeout(function(){
+        var fadeAway = document.getElementById('disappear');
+        fadeAway.style.opacity = 0;
+        window.clearInterval(counter);
+    }, 10000);
+    
+    var counter = window.setInterval(function(){
+        document.getElementById('timeLeft').innerHTML = timer;
+        timer--;
+    }, 1000);
+
+
+    window.setInterval(function(){
+        function randomColor(){
+            return Math.floor(Math.random()*256)
+        }
+        var body = document.getElementsByTagName('body')[0];
+        body.style.backgroundColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+    }, 2000);
+    </script>
+</body>
+</html>
