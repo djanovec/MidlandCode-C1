@@ -35,7 +35,8 @@ div.addEventListener("mouseenter", function() {
   if (gameStarted) {
     endGame("winner");
   }
-}) + document.querySelector("body").appendChild(div);
+}) 
+document.querySelector("body").appendChild(div);
 
 function endGame(result) {
   gameStarted = false;

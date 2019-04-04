@@ -4,18 +4,52 @@
     * Use JavaScript to change the background color of one of the divs background colors using any selector you prefer.
     * After 10 seconds, change the text-color of one div to anything you prefer
     * Every 2 seconds, change the background color to a random color in a list of 5 predefined colors you chose.
+``` html
+    <div class="randomColor" id="backgroundChange"></div>
+    <div class="randomColor"></div>
+    <div class="randomColor"></div>
+```
+
+``` javascript
+    var divs = document.querySelectorAll('.randomColor')
+    // same for singeBackground change
+    var colors = [] // array of colors any format you choose;
+    document.querySelector("#backgroundChange").style.backgroundColor = "red";
+    window.setTimout(function(){
+        // #backgroundChange.style.color = "blue"
+    }, 10000)
+    window.setInterval(function(){
+        // select random element of colors loop through
+        // div[i].style.backgroundColor = colors[Math.floor(Math.random()* colors.length)]
+    }, 2000)
+```
+
+
 * Create a simple site that prompts the user for a time limit.
     * Start the clock/div with a green background added by a class.
     * Display the starting time on the DOM. 
     * Count the time down every second and update the dom.
     * When the timer reaches zero, remove the class with the green background and add one with a red background.
     * The timer should also stop counting down once the timer reaches zero.
+``` html
+    <div class="green"></div>
+    <style> .green{background-color: green;}
+```
+``` javascript
+    // grab the element timer count will go into and save to variable var div
+    // Prompt and parseInt(prompt goes in here) and store in a variable let's call it timerStart;
+    // var message = `${timerStart} seconds left`
+    // div.innerText = message div.innerText = "<div style="background-color: blue;"></div>"
+    // setInterval for every 1000ms when counter reaches 0 stop interval;
+```
 
 ## Useful Prototypical Functions
-* Write code to allow for someone to supply two numbers (either as a prompt or hard-coded in for testing) and then create a two dimensional array basedd off the numbers supplied. Example:
+* Write code to allow for someone to supply two numbers (either as a prompt or hard-coded in for testing) and then create a two dimensional array based off the numbers supplied. Example:
 ``` javascript
     //If 3 and 2 were supplied, it should create
     [[1,2],[1,2], [1,2]]
+    // var arr = new Array(3);
+    // loop through outer array adding in inner loop sub array (1-2)
     //If 2 and 3 were supplied it should create
     [[1,2,3], [1,2,3]]
 ```
@@ -70,3 +104,34 @@
     7. Take the div with `#div9` and move it to the top
     8. All divs with `.class2` should have a black background with white text
     9. Take the div with `#div10` and reduce the height and width to 42% of what it was (without hard-coding the number) and then change the id to `div10New`
+
+    ``` javascript
+        document.querySelectorAll('.class1').forEach(function(val){
+            val.style.border = "2px solid orange";
+        })
+        document.querySelectorAll('.class3').forEach(function(val){
+            val.style.color = "red";
+        })
+        document.querySelectorAll('.class4').forEach(function(val){
+            val.style.color = "blue";
+        })
+        document.querySelectorAll('.class5').forEach(function(val){
+            val.classList.remove('class5');
+            val.classList.add('class6')
+        })
+        document.querySelectorAll('div').forEach(function(val){
+            val.classList.add("class7");
+        })
+        document.querySelector('#div9').remove();
+        var div9 = document.querySelector("#div9");
+        div9.remove();
+        document.querySelector('body').prepend(div9)
+        document.querySelectorAll('.class2').forEach(function(val){
+            val.style.backgroundColor = "black";
+        })
+        var div10 = document.querySelector("#div10");
+        div10.id = "div10New"
+        div10.style.height = div10.clientHeight * .42 + 'px'
+        div10.style.width = div10.clientWidth * .42 + 'px'
+
+    ```

@@ -17,7 +17,7 @@ console.log('Query Selector with :not', document.querySelectorAll('.someDiv:not(
 //document.getElement(s)By return Elements
 
 //document.getElementsByClassName
-document.getElementsByClassName('someDiv');
+console.log(document.getElementsByClassName('someDiv'));
 
 //document.getElementsByTagName
 console.log(document.getElementsByTagName('meta'));
