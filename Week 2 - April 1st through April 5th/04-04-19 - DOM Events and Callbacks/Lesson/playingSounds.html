@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .button {
+        background-color: blue;
+        cursor: pointer;
+        color: white;
+        display: block;
+        margin: 10px auto;
+        width: 200px;
+        padding: 20px;
+      }
+
+      .button:hover {
+        background-color: #42f1f4;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button" id="doodily">Indeedily Doodily</button>
+    <button class="button" id="bovine">Bovine University</button>
+    <button class="button" id="okily">Okily Dokily</button>
+    <button class="button" id="nuts">You're All Nuts</button>
+    <button class="button" id="job">Take This Job And Restaff It</button>
+    <button class="button" id="everybody">Hi Everybody</button>
+    <button class="button" id="broke">Cool I Broke His Brain</button>
+    <script>
+      var sounds = {
+        doodily: new Audio(
+          "http://www.richmolnar.com/Sounds/Ned%20-%20Indeedily%20doodily.wav"
+        ),
+        bovine: new Audio(
+          "http://www.richmolnar.com/Sounds/Ralph%20-%20Bovine%20U.wav"
+        ),
+        okily: new Audio(
+          "http://www.richmolnar.com/Sounds/Ned%20-%20Okily%20Dokily.wav"
+        ),
+        nuts: new Audio(
+          "http://www.richmolnar.com/Sounds/Homer%20-%20You're%20all%20nuts.wav"
+        ),
+        job: new Audio(
+          "http://www.richmolnar.com/Sounds/Homer%20-%20Take%20this%20job%20and.wav"
+        ),
+        everybody: new Audio(
+          "http://www.richmolnar.com/Sounds/Dr.%20Nick%20-%20Hi%20everybody%20(1).wav"
+        ),
+        broke: new Audio(
+          "http://www.richmolnar.com/Sounds/Bart%20-%20Cool,%20I%20broke%20his%20brain.wav"
+        )
+      };
+      var buttons = document.querySelectorAll(".button");
+
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function(e) {
+          sounds[e.target.id].play();
+        });
+      }
+    </script>
+  </body>
+</html>

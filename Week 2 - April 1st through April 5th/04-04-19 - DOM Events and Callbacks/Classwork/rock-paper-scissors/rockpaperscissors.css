@@ -1,0 +1,55 @@
+main, header{
+    display: block;
+}
+
+.text-center{
+    text-align: center
+}
+
+.heading{
+    color: red;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex33{
+    flex-basis: 33%;
+}
+
+
+
+.content{
+    width: 100%;
+    margin: auto;
+    height: 50px;
+    margin: 5px;
+}
+
+.buttonContainer{
+    height: 50px;  
+    justify-content: space-around;
+}
+
+.choice{
+    flex-basis: calc(100% / 5);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.rock{
+    background-color: brown;
+}
+
+.paper{
+    background-color: white;
+    color: black;
+}
+
+.scissors{
+    background-color: silver;
+}

@@ -1,0 +1,75 @@
+<!-- 
+The goal for this mini-project will be the follwing:
+
+1) When a user clicks a box on the left, remove the corresponding box in the right. 
+2) If the box on the right is missing, re-add it to the bottom of the divs on the right.
+3) Use DRY whenever possible for this.
+4) For added challenge, whenever you add re-add a div to the right. Add it where it should go in numerical order
+-->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .left{
+        float: left;
+        width: 70%;
+      }
+      .right{
+        width: 30%;
+        float: left;
+      }
+      .leftDiv{
+        line-height: 200px;
+        text-align: center;
+        cursor: pointer;
+        width: calc(100%/3 - 4px);
+        margin: 2px;
+        height: 200px;
+        background-color: red;
+        color: white;
+        float: left;
+      }
+
+      .rButton{
+        line-height: 98px;
+        text-align: center;
+        cursor: pointer;
+        height: 98px;
+        float: left;
+        width: calc(50% - 4px);
+        margin: 2px;
+        background-color: orange;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <div class="leftDiv">1</div>
+      <div class="leftDiv">2</div>
+      <div class="leftDiv">3</div>
+      <div class="leftDiv">4</div>
+      <div class="leftDiv">5</div>
+      <div class="leftDiv">6</div>
+      <div class="leftDiv">7</div>
+      <div class="leftDiv">8</div>
+      <div class="leftDiv">9</div>
+    </div>
+
+    <div class="right">
+      <div class="rButton">1</div>
+      <div class="rButton">2</div>
+      <div class="rButton">3</div>
+      <div class="rButton">4</div>
+      <div class="rButton">5</div>
+      <div class="rButton">6</div>
+      <div class="rButton">7</div>
+      <div class="rButton">8</div>
+      <div class="rButton">9</div>
+    </div>
+  </body>
+</html>
