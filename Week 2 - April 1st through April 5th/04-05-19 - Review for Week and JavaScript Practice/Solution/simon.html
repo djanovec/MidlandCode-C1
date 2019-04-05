@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container{
+            width: 600px;
+            height: 600px;
+            margin: auto;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .button{
+            cursor: pointer;
+            width: 294px;
+            height: 294px;
+            border-color: black;
+            border-style: solid;
+            float: left;
+        }
+        #footer{
+            text-align: center;
+        }
+        #footer button{
+            padding: 14px 7px;
+            color: white;
+            cursor: pointer;
+            width: 175px;
+            background-color: black;
+        }
+        #inner-circle{
+            font-size: 22px;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            line-height: 75px;
+            z-index: 1000;
+            border-radius: 50%;
+            background-color: black;
+            width: 200px;
+            height: 180px;
+            padding-top: 20px;
+        }
+        #green{
+            border-width: 4px 2px 2px 4px;
+            border-top-left-radius: 100%;
+            background-color: rgba(0, 128, 0, .4)
+        }
+        #green.active{
+            background-color: rgba(0, 128, 0, 1)
+        }
+        #red{
+            border-width: 4px 4px 2px 2px;
+            border-top-right-radius: 100%;
+            background-color:rgba(255, 0, 0, .4);
+            }
+            #red.active{
+                background-color:rgba(255, 0, 0, 1);
+            }
+        #blue{
+            border-width: 2px 2px 4px 4px;
+            border-bottom-left-radius: 100%;
+            background-color:rgba(0,0, 255,.4);
+        }
+        #blue.active{
+            background-color:rgba(0,0, 255,1);
+        }
+        #yellow{
+            border-width: 2px 4px 4px 2px;
+            border-bottom-right-radius: 100%;
+            background-color:rgba(255, 255, 0, .4);
+        }
+        #yellow.active{
+            background-color:rgba(255, 255, 0, 1);
+        }
+        #count{
+            border: 1px solid white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button" id="green"></div>
+        <div class="button" id="red"></div>
+        <div id="inner-circle">
+            Simon<br>
+            <span id="count">0</span>
+        </div>
+        <div class="button" id="blue"></div>
+        <div class="button" id="yellow"></div>
+    </div>
+    <div id="footer">
+        <h2>GAME OVER!</h2>
+        <button id="newGame">New Game</button>
+    </div>
+    <!-- <script src="firstSteps.js"></script> -->
+    <!-- <script src="secondSteps.js"></script> -->
+    <!-- <script src="thirdSteps.js"></script> -->
+    <!-- <script src="fourthSteps.js"></script> -->
+    <!-- <script src="fifthSteps.js"></script> -->
+    <script src="bonusSteps.js"></script>
+</body>
+</html>
