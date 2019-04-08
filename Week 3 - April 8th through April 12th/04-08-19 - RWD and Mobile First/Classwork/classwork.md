@@ -18,4 +18,4 @@
     * Filter / Type/Style for different sections
     * Online shopping
 * Menu / Nav - All 3
-* Header / Footer - 
+* Header / Footer
