@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            flex-basis: calc((100% / 3) - 2px);
+            padding-top: calc((100% / 3) - 2px);
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            flex-flow: row wrap;
+            width: 70%;
+            margin: auto;
+        }
+
+        .x {
+            background-color: orange;
+        }
+
+        .o {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+    </div>
+    <script>
+        var isXTurn = true;
+        var boxes = document.querySelectorAll(".box");
+        boxes.forEach(function (val) {
+            val.addEventListener("click", function () {
+                if (this.classList.contains("o") || this.classList.contains("x")) {
+                    return;
+                }
+
+                var classToAdd = isXTurn ? "x" : "o";
+                this.classList.add(classToAdd)
+                isXTurn = !isXTurn;
+                gameOutcome()
+            })
+        })
+
+        function gameOutcome() {
+            if (boxes[0].classList.toString() !== "box" && boxes[0].classList.toString() === boxes[1].classList.toString() && boxes[0].classList.toString() === boxes[2].classList.toString()) {
+                console.log("Game over!")
+            }
+        }
+
+    </script>
+</body>
+
+</html>
