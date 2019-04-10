@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Transforms</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #0088FF;
+            display: inline-block;
+            font-size: 20px;
+            line-height: 200px;
+            text-align: center;
+            margin: 5px;
+            color: white;
+            border: 1px solid black;
+        }
+
+        .translate:hover{
+            -ms-transform: translate(20px, 20px);
+            -webkit-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
+        }
+        .rotate:hover{
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .scale:hover{
+            -ms-transform: scale(1.5,2);
+            -webkit-transform: scale(1.5,2);
+            transform: scale(1.5,2);
+        }
+
+        .skewX:hover{
+            -ms-transform: skewX(35deg);
+            -webkit-transform: skewX(35deg);
+            transform: skewX(35deg);
+        }
+
+        .skewY:hover{
+            -ms-transform: skewY(35deg);
+            -webkit-transform: skewY(35deg);
+            transform: skewY(35deg);
+        }
+        .skew:hover{
+            -ms-transform: skew(35deg, 25deg);
+            -webkit-transform: skew(35deg, 25deg);
+            transform: skew(35deg, 25deg);
+        }
+
+
+        /*matrix(ScaleX, SkewY, SkewX, ScaleY, translateX, translateY)*/
+        .matrix:hover{
+            -ms-transform: matrix(1.5, 2, 2.5, 1.5, 1, 3);
+            -webkit-transform: matrix(1.5, 2, 2.5, 1.5, 1, 3);
+            transform: matrix(1.5, 2, 2.5, 1.5, 1, 3);
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="rotate">Rotate</div>
+<div class="translate">Translate</div>
+<div class="scale">Scale</div>
+<div class="skewX">Skew X</div>
+<div class="skewY">Skew Y</div>
+<div class="skew">Skew</div>
+<div class="matrix">Matrix</div>
+
+
+</body>
+</html>

@@ -19,5 +19,8 @@ You will be taking what you have learned so far this week to build a mobile resp
     * Type (Make a select box for this)
     * Year - Your choice of input type
 * If an error occurred, let the user know. Otherwise display the data to the page.
-* Since only 10 items are returned, figure out how many items WOULD have been sent and let the user know. Then let the user pick a page out of that many to select to. This will be a lesson in the wonders / frustrations of pagination.
+* Since only 10 items are returned, figure out how many items WOULD have been sent and let the user know. 
+
+## BONUS GOALS
+* Then let the user pick a page out of that many to select to. This will be a lesson in the wonders / frustrations of pagination.
 * Add styling and additional functionality as time permits.
