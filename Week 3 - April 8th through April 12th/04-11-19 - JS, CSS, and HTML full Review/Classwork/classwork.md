@@ -4,7 +4,14 @@ Today we will be finishing our projects from yesterday. If you are already finis
 
 Once you are complete with your project as a group, let me know and I will have more work for you. Alternatively, feel free to hop into an existing group and provide help as needed.
 
-Once everyone is finished, this will be the next project to be done with randomly assigned groups or solo: 
+Once everyone is finished, this will be the next project to be done with randomly assigned groups:
+
+| Group   | Group  | Group | Group    |
+|---------|--------|-------|----------|
+| Amy     | Andrew | Ben   | Carl     |
+| Connor  | Eric   | Dave  | Michelle |
+| Grayton | Ian    | Paul  | Terry    |
+
 
 ## We're going to build a calculator
 * Have a div that functions as the input for the calculator.
