@@ -19,7 +19,7 @@
 
         div{
             -webkit-transition-property: -webkit-transform;
-            transition-property: transform;
+            transition-property: all;
 
             -webkit-transition-delay: 500ms;
             transition-delay: 500ms;
@@ -34,7 +34,7 @@
             /*SHORTHAND*/
             /*transition: property duration timing-function delay*/
             /*above example would be:*/
-            /*transition: transform 1s linear 500ms;*/
+            /*transition: transform 10s linear 100ms;*/
         }
 
         .translate:hover{
@@ -44,6 +44,7 @@
 
         }
         .rotate:hover{
+            background-color: orange;
             -ms-transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
