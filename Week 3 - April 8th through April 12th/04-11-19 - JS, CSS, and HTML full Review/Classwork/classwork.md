@@ -24,3 +24,4 @@ Once everyone is finished, this will be the next project to be done with randoml
     * If '=' is pressed, show the value of the last action pressed.
     * If 'CE' is pressed, clear out the div but keep the chain of actions in memory.
     * If 'C' is pressed, clear out memory and start from scratch.
+* BONUS - Allow a user to push either the numpad or the actual numbers on the keyboard to use the calculator if they don't want to click buttons. [This Site](https://keycode.info/) will help with this.
