@@ -76,3 +76,93 @@ export class FormComponent implements OnInit {
 
 }
 ```
+
+## Routing:
+### In Parent Template
+``` HTML
+<router-outlet></router-outlet>
+<br>
+<a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" 
+    [routerLink]="['/random-number']">Random
+    Number</a>
+<br>
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" 
+    [routerLink]="['/form']">Form</a>
+```
+
+### In App Routing Module
+``` typescript
+    import { NgModule } from '@angular/core';
+    import { Routes, RouterModule } from '@angular/router';
+    import { RandomNumberComponent } from './random-number/random-number.component';
+    import { FormComponent } from './form/form.component';
+
+    const routes: Routes = [
+    {path: 'random-number', component: RandomNumberComponent},
+    {path: 'form', component: FormComponent}, 
+    {path: '**', redirectTo: 'random-number'}
+    ];
+
+    @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+    })
+    export class AppRoutingModule { }
+```
+
+
+## Todo App
+### Template
+``` HTML
+<label for="name">Name</label>
+<input id="name" [(ngModel)]="task.name" type="text" placeholder="Todo Name">
+<label for="date">Due Date</label>
+<input id="date" type="date" [(ngModel)]="task.dueDate" placeholder="Due Date">
+<button (click)="addTodo()">Add Todo</button>
+
+<h2 class="blue-text">Incomplete Tasks</h2>
+<ul>
+  <ng-container  *ngFor="let todo of todos; let i = index">
+  <li *ngIf="!todo.completed">Name: {{todo.name}}, Due Date: {{todo.dueDate}}
+    <input type="checkbox" id="complete{{i}}" [(ngModel)]="todo.completed">
+    <label for="complete{{i}}">Mark as Complete</label>
+
+  </li>
+</ng-container>
+</ul>
+
+
+<h2 class="yellow-text">Complete Tasks</h2>
+<ul>
+  <ng-container  *ngFor="let todo of todos; let i = index">
+    <li *ngIf="todo.completed">Name: {{todo.name}} , Due Date: {{todo.dueDate}}
+      <input type="checkbox" id="incomplete{{i}}" [(ngModel)]="todo.completed">
+      <label for="incomplete{{i}}">Mark as Incomplete</label>
+    </li>
+  </ng-container>
+  </ul>
+```
+### Controller
+``` typescript
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-task-list',
+  templateUrl: './task-list.component.html',
+  styleUrls: ['./task-list.component.scss']
+})
+export class TaskListComponent implements OnInit {
+  todos: Object[] = [];
+  task: Object = {name: '', dueDate: '', completed: false}
+  constructor() { }
+
+  addTodo(){
+    this.todos.push(this.task);
+    console.log(this.todos);
+    this.task = {name: '', dueDate: '', completed: false}
+  }
+  ngOnInit() {
+  }
+
+}
+```
