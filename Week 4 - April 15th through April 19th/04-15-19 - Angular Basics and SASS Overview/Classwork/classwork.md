@@ -14,14 +14,15 @@
 
 
 ## Random Number Angular
-``` typescript
+``` HTML
 //template
     <div *ngFor="let num of randomNum; let i = index">Random Number {{i+1}}: {{num}}
 <button *ngIf="i !== 4" (click)="deleteNumber(i)">Delete Number</button>
 </div>
 
 <button (click)="addRandomNum()">Add Random Numbers</button>
-
+```
+``` typescript
 //.ts File
 import { Component, OnInit } from '@angular/core';
 
@@ -49,14 +50,15 @@ export class RandomNumberComponent implements OnInit {
 ```
 
 ## Form Input
-``` typescript
+``` HTML
 //Template
 <input placeholder="Name" [(ngModel)]="personName">
 
 {{personName}}
 
 <button (click)="resetName()">Change Name</button>
-
+```
+``` typescript
     //.ts
     import { Component, OnInit } from '@angular/core';
 
