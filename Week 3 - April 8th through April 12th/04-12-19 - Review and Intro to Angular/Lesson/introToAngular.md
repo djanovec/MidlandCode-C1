@@ -31,6 +31,3 @@
     7. Interface
     8. Enum
     9. Module
-
-    # General Class Overview
-
