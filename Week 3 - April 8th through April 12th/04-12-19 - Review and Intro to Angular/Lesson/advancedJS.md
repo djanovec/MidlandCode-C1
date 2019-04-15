@@ -26,6 +26,11 @@ We will be covering a lot of more advanced topics once we hit Angular including 
     }
 
     a => a*5
+
+    someArr.filter(val=> val>20)
+    someArr.filter(function(val){
+        return val > 20;
+    })
 ```
 * Spread syntax:
     ``` javascript 
