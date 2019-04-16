@@ -10,3 +10,25 @@
     * An add todo section should have a form for a username and a title of todo. When you add a todo it should keep the todos you already have and just add to it.
     * A todo List which would just retrieve all todos and list them in a table with id, username, and todo showing. The usernames should also be links going to "/username/theusernameinthetable". You should also have a button to delete the specific todo via the service.
 5. In the user component, it should have all the functionality of the above. Think about how you want to handle deleting elements.
+    * The user component should not need to have a username input for adding todos.
+    * Only the user's todos should show.
+    * The user component should be the only place that allows for deletion of todos
+
+
+    ## Todos By Username:
+    If you have: 
+    ``` javascript
+    [{name: 'Wash the dog', user: 'Mike'},
+    [{name: 'Wash the cat', user: 'Mike'},
+    [{name: 'Wash the horse', user: 'Mike'},
+    [{name: 'Wash the elephant', user: 'John'},
+    [{name: 'Wash the rhino', user: 'John'},
+    ]
+    ```
+    If you are at `/user/Mike` You should only get:
+    ``` javascript
+    [{name: 'Wash the dog', user: 'Mike'},
+    [{name: 'Wash the cat', user: 'Mike'},
+    [{name: 'Wash the horse', user: 'Mike'}]
+    ```
+
