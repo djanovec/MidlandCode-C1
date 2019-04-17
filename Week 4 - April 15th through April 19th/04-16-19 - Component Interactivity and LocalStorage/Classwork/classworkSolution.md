@@ -131,7 +131,7 @@ export class TodoComponent implements OnInit {
 }
 
 ```
-### .html Tenplate File
+### .html Template File
 We are accessing all of the todos and using an `ngFor` to iterate over them. We are also adding conditional routing to be able to access the users page that belongs to the username in each todo. We are also using `ngModel` and the `(click)` binding to allow for the addition of todos
 ``` html
 <br>Task:<input type="text" [(ngModel)]="todo.task"><br>
