@@ -19,16 +19,16 @@
     If you have: 
     ``` javascript
     [{name: 'Wash the dog', user: 'Mike'},
-    [{name: 'Wash the cat', user: 'Mike'},
-    [{name: 'Wash the horse', user: 'Mike'},
-    [{name: 'Wash the elephant', user: 'John'},
-    [{name: 'Wash the rhino', user: 'John'},
+    {name: 'Wash the cat', user: 'Mike'},
+    {name: 'Wash the elephant', user: 'John'},
+    {name: 'Wash the horse', user: 'Mike'},
+    {name: 'Wash the rhino', user: 'John'},
     ]
     ```
     If you are at `/user/Mike` You should only get:
     ``` javascript
     [{name: 'Wash the dog', user: 'Mike'},
-    [{name: 'Wash the cat', user: 'Mike'},
-    [{name: 'Wash the horse', user: 'Mike'}]
+    {name: 'Wash the cat', user: 'Mike'},
+    {name: 'Wash the horse', user: 'Mike'}]
     ```
 
