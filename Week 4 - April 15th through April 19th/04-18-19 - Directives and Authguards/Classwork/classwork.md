@@ -48,6 +48,6 @@ You can use a pre-existing app for this or start with a new one:
 
 ## Back to the Todo App!
 
-1. Add a transition between each of our routes. Let's have them fade in and out.
-2. Now let's add an animation for when we add a todo.
+1. Add the ability for a user to login and store the user into local storage. 
+2. Only allow the appropriate user to access a `user/:username` route via an AuthGuard
 

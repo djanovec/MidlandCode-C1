@@ -46,7 +46,7 @@
 
         @Injectable()
         export class AuthGuard implements CanActivate {
-        constructor(userService: OurUserService) {}
+        constructor(userService: OurUserService, private router: Router) {}
             canActivate(): boolean {
                 if(this.userService.isLoggedIn){
                     return true;
