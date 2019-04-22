@@ -12,7 +12,8 @@ Let's take advantage of the [Giphy API](https://giphy.com/) for this one!
 ## Not the required order but possibly the easiest.
 1. Sign up for an API Key through Giphy
 2. Look at the Giphy Docs to see what kind of format the data will be returned in from the API
-3. BUild the template for the single component.
+3. Build the template for the single component.
+3. Build a service to make the API calls
 4. Create a simple HTTP.GET request with a button click to make sure you have http syntax down.
 5. Set up the timer (for how long they've been on the page) observable
 6. Add the extra functionality such as calling on change or with data typed / etc.
