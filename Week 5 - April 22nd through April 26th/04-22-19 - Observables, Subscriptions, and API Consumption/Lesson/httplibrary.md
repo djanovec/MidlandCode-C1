@@ -8,7 +8,10 @@ and API call for data.
 
 ## How do we use it?
 * The library itself is actually quite simple to use. It utilizes semantic calls for the basic HTTP protocols. 
-* The library itself is actually a series of functions that are observables so anything you want to do with them is completely acceptable. 
+* The library itself is actually a series of functions that are observables so anything you want to do with them is completely acceptable.
+* You will need to install it and use the module in your `app.module.ts` file:
+    * `npm install @angular/http` to install it for the project
+    * Then add `HttpClientModule` to your `app.module.ts` file in the `imports:[]` array.
 * Like most services or built in things, it needs to be injected into the constructor, it generally follows this pattern: 
     ``` typescript
         constructor(private http: HttpClient){}
