@@ -14,6 +14,8 @@ const locations = new Observable((observer) => {
   // Get the next and error callbacks. These will be passed in when
   // the consumer subscribes.
   const {next, error} = observer;
+  // const next = observer.next
+  //  const error = observer.error
   let watchId;
  
   // Simple geolocation API check provides values to publish

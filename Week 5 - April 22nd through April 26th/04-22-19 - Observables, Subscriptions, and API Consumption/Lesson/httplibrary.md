@@ -31,6 +31,22 @@ and API call for data.
             )
         }
     ```
+``` typescript
+getBuddies() {
+    //Adds JWT to header
+    let headers = new HttpHeaders().append("Authorization", `JWT ${localStorage.getItem("authToken")}`);
+    this.http.get("/api/buddy", { headers: headers })
+      .pipe(
+        debounceTime(60000),
+        map((res: BuddyResponse) => res.buddies),
+        catchError(err => throwError("Could not access, please check credentials and try again.")))
+      .subscribe(buddies => 
+        this.buddyStore.addBuddies(buddies), 
+      err=>{
+        this.rootStore.addError(err);
+      });
+  }
+```
 * With the above, we would simply need to subscribe to the data on our component like 
     ``` typescript
         this.todoService.getTodos().subscribe(res=> this.todos = res.todos); //or whatever key the response is on.

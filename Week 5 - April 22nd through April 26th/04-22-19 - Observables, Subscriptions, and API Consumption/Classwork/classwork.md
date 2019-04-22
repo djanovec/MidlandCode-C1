@@ -9,3 +9,10 @@ Let's take advantage of the [Giphy API](https://giphy.com/) for this one!
 * If a user is typing a bunch but at the end of typing the value doesn't change, then don't send a new request.
 * Also add a counter on the page (using observables) that shows how long the user has been on the page. 
 
+## Not the required order but possibly the easiest.
+1. Sign up for an API Key through Giphy
+2. Look at the Giphy Docs to see what kind of format the data will be returned in from the API
+3. BUild the template for the single component.
+4. Create a simple HTTP.GET request with a button click to make sure you have http syntax down.
+5. Set up the timer (for how long they've been on the page) observable
+6. Add the extra functionality such as calling on change or with data typed / etc.
