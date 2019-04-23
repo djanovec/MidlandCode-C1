@@ -27,25 +27,38 @@
 * Setting the structure of an Object variable based off known keys/types
 
 ## Directives
-
+* Reusing funcitonality for the template. 
+* Allowing functionality for the template that takes some form of input.
 
 ## Routing
-
+* Connecting Components for an actual SPA.
 
 ## API Calls
-
+* Get/Sending info from/to an outside source (outside of the app). 
 
 ## Observables
-
+* Need to watch asynchronous data.
+* Any sort of data that is going to change that you need live updates to.
 
 ## Parent Child Communication
-
+* Pass information from parent to child (so that the child has access to it).
+* Passing information up to the parent to utilize that data / trigger an event.
+* When a service doesn't makes sense for the use case.
+* When you want to use a presentational component inside a logical component.
+``` html
+<!-- Inside the parent template -->
+<app-child-component [childVarName]="parentVarName" ></app-child-component>
+```
 
 ## Form Control
+* Control types of data allowed.
+* Form validation.
+* Easier way to update errors live to the template.
 
-
-## Rxjs
+## Rxjs Library
+* When you want to do things with observables.
+* Changing behaviour of observables / when they emit new data.
 
 
 ## HttpClient
-
+* Used to make API calls or calls to the outside.
