@@ -2,7 +2,7 @@
 
 Simply put they're a way for you to describe what a specific object should look like and what keys it should have. You use them a bunch when you have objects that you want to look a specific way. 
 
-Let's take our todos for example. Before we declared them like this" 
+Let's take our todos for example. Before we declared them like this: 
 ``` typescript
     let newTodo : Object = { 
         name: 'something', 
