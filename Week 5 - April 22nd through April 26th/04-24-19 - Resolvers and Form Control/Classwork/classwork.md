@@ -25,3 +25,8 @@ Music Site Bare Minimums
 * Create Favorites 
 * Create Playlists
 *  Play Music (Dummy Music in public domain)
+
+
+## GROUPS
+Group - Amy, Ben, Carl, Connor, Dave, Eric
+Group - Andrew, Ian, Grayton, Michelle, Paul, Terry
