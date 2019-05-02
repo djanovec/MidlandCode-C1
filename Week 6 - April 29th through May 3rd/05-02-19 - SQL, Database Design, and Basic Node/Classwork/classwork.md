@@ -40,24 +40,52 @@
 
 
  ## Now that we know our Schema, let's do the following (making sure that the table returns all useful data, not just the bare minimum): 
-1. Find all Customers in the USA or Mexico ordered Alphabetically by Customer Name
+1. Find all Customers in the USA or Mexico ordered Alphabetically by Contact Name
     * Solution: 
+        ``` SQL
+        SELECT * FROM Customers 
+        WHERE Customers.Country IN ("USA", "Mexico")
+        ORDER BY Customers.ContactName
+        ```
     
 2. Find all Products that cost more than 40
     * Solution: 
-
+        ``` SQL
+        SELECT * FROM Products
+        WHERE Products.Price > 40  
+        ```
 3. Find all Employees born before 1960.
     * Solution: 
-    
+        ``` SQL
+        SELECT * FROM Employees
+        WHERE Employees.BirthDate < "1960-01-01"        
+        ```
 4. Find all Products that are Beverages
     * Solution: 
-    
+        ``` SQL
+        SELECT * FROM Products
+        JOIN Categories ON Categories.CategoryID = Products.CategoryID
+        WHERE Categories.CategoryName = "Beverages"
+        ```
 5. Find all Employees Who have ordered something that shipped to Spain
     * Solution: 
-    
+        ``` SQL
+        SELECT * FROM Employees
+        JOIN Orders ON Orders.EmployeeID = Employees.EmployeeID
+        JOIN Customers ON Customers.CustomerID = Orders.CustomerID
+        WHERE Customers.Country = "Spain"
+        ```
 6. Find all Orders with a total price over 2000 sorted from most expensive to least expensive.
     * Solution: 
-    
+        ``` SQL
+        SELECT Orders.OrderID, SUM(OrderDetails.Quantity * Products.Price) as TotalPrice 
+        FROM Orders
+        JOIN OrderDetails ON OrderDetails.OrderID = Orders.OrderID
+        JOIN Products on Products.ProductID = OrderDetails.ProductID
+        GROUP BY Orders.OrderID
+        HAVING TotalPrice > 2000
+        ORDER BY TotalPrice DESC
+        ```
 
 ## Node Practice
 
