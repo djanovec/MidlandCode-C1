@@ -108,3 +108,6 @@
             * Will take a Stock Symbol and return the [Latest Price](https://www.alphavantage.co/documentation/#latestprice)
             * If no quote is returned, let the user know something went wrong.
             * For added effect, have any change in price be shown in red for a loss, or green for an increase.
+    * Two things to make this work
+        * Node Package that functions as `fetch()` `(npm i ???)` and then `let fetch = require('???')`
+        * Use `async` `await`
