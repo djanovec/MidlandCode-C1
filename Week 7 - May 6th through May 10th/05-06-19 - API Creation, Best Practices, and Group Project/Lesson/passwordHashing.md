@@ -15,7 +15,7 @@ I've mentioned it before but if you're on a site that when you ask to reset your
 
 ## How to hash
 
-*  the `bcrypt` package is the preferred method for hashing. It's slower than the built in `crypto` package in node but is more secure (hence it being slower).
+*  the `bcrypt` package is the preferred method for hashing. It's slower than the built in `crypto` package in node but is more secure (hence it being slower). `npm install bcrypt`
 * This can be done synchronously or asynchronously depending on your needs. See the [docs](https://www.npmjs.com/package/bcrypt) for more info.
 * After installing and requiring the bcrypt package, hashing is incredibly straight forward.
 * Bcrypt uses salt rounds for more complex hashing

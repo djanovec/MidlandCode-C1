@@ -1,18 +1,24 @@
 ### Time to connect to the SQL database
 * After setting up the username and password as well as the tables and the database, connecting to the database is quite simple.
+``` javascript
+    "SELECT * FROM todos where todos.userID =" + req.params.userID
+    req.params.userID = "5; DROP TABLE todos;"
+```
+
+
 * To set up a single use connection you can simnply use the following code: 
     ``` javascript
         var mysql = require('mysql')
         var connection = mysql.createConnection({
         host     : 'localhost',
-        user     : 'dbuser',
-        password : 's3kreee7',
-        database : 'my_db'
+        user     : 'example_user',
+        password : 'password',
+        database : 'todo_example'
         });
 
         connection.connect()
 
-        connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
+        connection.query('SELECT * from todos where userId = ? AND completed = ?', [userId, 1], function (err, rows, fields) {
         if (err) throw err
 
         console.log('The solution is: ', rows[0].solution)
