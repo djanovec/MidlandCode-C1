@@ -1,0 +1,3 @@
+## Classwork for 05-02-19
+
+You will be working in groups of 4 to build a site from the ground up. You can utilize previously made resources if you all would like but all group members need to be on board and fully understand the utilized resources if you do. The site will need to have some form of login functionality with an API built into the backend that can be consumed for any logging in or data access. It also needs to utilize a frontend SPA as well. If you feel up to it try to implement [Angular Universal](https://angular.io/guide/universal)
