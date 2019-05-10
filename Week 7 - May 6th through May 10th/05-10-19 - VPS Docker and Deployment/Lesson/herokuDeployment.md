@@ -6,11 +6,22 @@ Heroku is a free hosting site that allows for easy deployment of applications di
 * Sign up for an account(or login) [here](https://www.heroku.com)
 * Once logged in create a new application from the dashboard
 * Set any configuration variables needed for your applicaton to run
-    * ![configVars](./configVars.png)
+
+![configVars](./configVars.png)
 * Set up how you would like to deploy (or do so via the CLI)
-    * ![deploy](./deploy.png)
+
+![deploy](./deploy.png)
 
 ### Downsides
 * Depending on usage of your application, the free tier only goes up to a certain amount of bandwith
 * There is only native support for postGres on the site, but you can connect to any hosted database via configuring the `config variables`
 * Depending on the plan, the application will go to sleep after a set amount of time which causes a small amount of load on startup if it has not been used in a while. 
+
+
+### To Deploy from github repo
+#### For an Angular App
+* Choose to unignore your dist folder and run `ng build --prod` before pushing to github
+* In your package.json
+    * Move the angular CLI form `dev` to normal `dependencies`
+    * add to your scripts `"postinstall": "ng build --prod",`
+* Set the `"start"` command to `node server` (server is your server's file name) 
