@@ -22,6 +22,5 @@ Heroku is a free hosting site that allows for easy deployment of applications di
 #### For an Angular App
 * Choose to unignore your dist folder and run `ng build --prod` before pushing to github
 * If you don't unignore your dist folder In your package.json
-    * Move the angular CLI form `dev` to normal `dependencies`
-    * add to your scripts `"postinstall": "ng build --prod",`
+    * Update your scripts `"build": "ng build --prod",`
 * Set the `"start"` command to `node server` (server is your server's file name) 
