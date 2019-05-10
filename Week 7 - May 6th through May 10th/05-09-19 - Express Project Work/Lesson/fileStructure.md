@@ -28,3 +28,35 @@
 * This CAN cause some problems so it depends on which direction you want to go with your commands
 
 ## That's it!
+
+
+``` javascript
+ login(username, password) {
+    let headers = new HttpHeaders().append("Content-Type", "application/json");
+    this.rootStore.clearFlash();
+    this.http
+      .post("/api/auth/login", JSON.stringify({ username, password }), {
+        headers: headers
+      })
+      .pipe(
+        map((res: UserResponse)=> {
+          if(res.token){
+            localStorage.setItem("authToken", res.token);
+            this.isLoggedIn = true;
+            this.router.navigate(["/buddies"]);
+            this.rootStore.selectUser(res.user)
+          }
+          return res.err
+          }),
+        catchError(error => throwError(error.error.err))
+      )
+      .subscribe(errMsg => {
+        if(errMsg){
+          this.rootStore.addError(errMsg)
+        }}, 
+        err=> {
+          this.rootStore.addError(err)} );
+  }
+
+\
+```
