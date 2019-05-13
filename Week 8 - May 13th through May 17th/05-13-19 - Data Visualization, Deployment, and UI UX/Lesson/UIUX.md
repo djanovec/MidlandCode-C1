@@ -107,19 +107,16 @@ The wheel is often used by designers as a starting point when trying to determin
 *Source: [Interaction Design Foundation: Bad Design vs. Good Design: 5 Examples We Can Learn From]( https://www.interaction-design.org/literature/article/bad-design-vs-good-design-5-examples-we-can-learn-frombad-design-vs-good-design-5-examples-we-can-learn-from-130706)*
 > *“Good design, when it’s done well, becomes invisible. It’s only when it’s done poorly that we notice it.” – Jared Spool*
 ### Design pitfalls:
-1.	Information Overload
-Definition of Information Overload: 
+1.	Information Overload: 
 *The excess of information available to a person aiming to complete a task or make a decision, which can cause undue stress in the decision-making process.*
 Best Practices:
     -	Understand what your users need, then design based on that.
     -	Use visuals instead of text to reduce clutter.
-2.	Mystery Meat Navigation
-Definition of Mystery Meat Navigation:
+2.	Mystery Meat Navigation:
 *Navigation where the destination of a link is not visible until the user clicks on it or points a cursor at it.*
 Best Practices:
     -	Always label links.
-3.	Adding Friction to User Actions
-Definition of Friction:
+3.	Adding Friction to User Actions:
 *An interaction that inhibits the user from intuitively and painlessly achieving their goals within a digital interface.*
 Best Practices:
     -	Avoid adding any kind of friction as far as possible, and implement it carefully when you have no alternative.
