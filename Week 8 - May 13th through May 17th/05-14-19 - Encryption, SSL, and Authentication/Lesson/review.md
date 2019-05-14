@@ -231,9 +231,80 @@
 
 * APIs
     * Setting up an API
-    * Consuming responses
-    * Login/Signup Responses
+        * Need to know schema / tables
+        * Need to decide what to protect / make public
+        * Need to decide what information to get and return to any given route
+        * Ensure all possible errors are handled
+    * Consuming responses / requests
+        * Need to know what is required from the user
+        * How much data to return / format of return
+        * Set proper status codes with response
+            ``` javascript
+            res.status(402).send({err: error, result: null})
+            ```
+        * Ensure that all formats of return for your API are the same
+            ``` javascript
+                //without error
+                res.send({err: null, result: []})
+                //with error
+                res.send({err: errorObject, result: null})
+                //Maintain that format throughout
+            ```
+    * Angular Service API Calls
+        * Need to know URL / Keys / Format of API
+        * Format of the API call
+            ``` typescript
+            import { Injectable} from "@angular/core";
+            import { HttpClient } from "@angular/common/http";
+            import { pipe } from 'rxjs';
+            import { map, catchError } from 'rxjs/operators';
+
+            @Injectable()
+            export class UserService{
+            constructor(private http: HttpClient) {
+            }
+            // Assume we have a users/signup route that returns either a success message or an error
+            // And a users/login route that returns an error or the user
+            // Assume we want to subscribe in our service
+                login(user){
+                    this.http.post("/users/login", user).pipe(
+                        map(res=> {
+                            if(res.error){
+                            throw new Error(res.error)
+                            }
+                            return res.result
+                        })
+                        catchError(err=> throw new Error("Something went wrong, please try again later"))
+                    )
+                    .subscribe(
+                        { 
+                            next: res => console.log(res), 
+                            error: err=> console.log(`Error: ${err}`)
+                        }
+                    )
+                }
+
+                signup(user){
+                    this.http.post("/users/signup", user).pipe(
+                        map(res=> {
+                            if(res.error){
+                                throw new Error(res.error)
+                            }
+                            return res.result
+                        })
+                        catchError(err=> throw new Error("Something went wrong, please try again later"))
+                    )
+                    .subscribe(
+                        { 
+                            next: res => console.log(res), 
+                            error: err=> console.log(`Error: ${err}`)
+                        }
+                    )
+                }
+            }
+            ```
     * Database Connections
+        * 
 
 * Angular General Review and Communication
     * Object Interfaces
@@ -265,9 +336,12 @@
     * AuthGuards
     * Best Practices
 
-* Database Structure
-    * Database Design
-    * Best Practices
+* Database Structure Best Practices
+    * Separate out information as much as possible
+    * Keep in mind if you have too much informaton in a table
+    * Take advantage of joining tables whenever possible
+    * Think about how hard it'd be to update information in the future.
+    * Take a look at repeating information in the tables.
 
 * Authentication / Passport
     * When to use what
@@ -296,8 +370,8 @@
 * Best Practice Reviews
     * Generic Overview
     * Specific Q&A
-* Work Prioritizaion / Compartmentalization
 
+* Work Prioritizaion / Compartmentalization
     * Order of Work
     * How to compartmentalize tons of work 
 
