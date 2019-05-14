@@ -154,10 +154,80 @@
         * Give error messaged to the user
         * Validate all possible requirements
         * Keep the form from submitting (and ideally disable the button) until the form is valid
+
 * Directives
     * Pre-built directives
+        * ngFor
+        * ngIf
+        * ng-container
+        * ngModel
+        * And many more!
     * Custom Directives
-    * When to use a directive over a component
+        * Each Directive houses it's own information for the element it binds to 
+        * General Setup
+        ``` typescript
+            @Directive({
+                selector: '.aClass' // bind to any element with a class 'aClass'
+                    // "my-directive" would be replaced where the <my-directive></my-directive> tag is
+                    // ".someClass" would be used anywhere that class is.
+                    // "[attrName]" where an attribute by that name is on an element
+                    // You can also use the :not() format
+            })
+            export class NewDirective{
+
+                //Functionality of your directive
+            }
+        ``` 
+        * Binding to events / listen for Events
+            ``` typescript
+            //Inside the class
+            //            v event v    v callback v
+            @HostListener('mouseover') onMouseOver(){
+                console.log('welcome to the element!');
+            }
+            ```
+        * To update the element(s) data
+            ``` typescript
+            @HostBinding('attribute you want to bind to') private varName: typeOfNeededVar;
+            ```
+        * Example Directive
+            ``` typescript
+                import { Directive, Input, OnInit, HostBinding } from '@angular/core';
+
+                @Directive({
+                selector: '[birthday]'
+                })
+
+                export class MissedBirthdayDirective implements OnInit{
+                    @Input() birthday: string;
+                    myBirthday: Date = new Date('1980-01-01')
+                    constructor() { }
+                    @HostBinding('class.missed') private missed: boolean;
+                    @HostBinding('class.is-older') private isOlder: boolean;
+
+                    checkDate(){
+                        let now = new Date(Date.now());
+                        let userBday = new Date(this.birthday)
+                        this.isOlder =  userBday < this.myBirthday;
+                        this.missed = (userBday.getMonth() < now.getMonth() || 
+                        (now.getMonth() === userBday.getMonth() && userBday.getDate() < now.getDate()))
+                    }
+                    ngOnInit(){
+                        this.checkDate();
+                    }
+                }
+            ```
+            ``` html
+            <div [birthday]="'2000-07-02'"></div>
+            ```
+    * When to use a directive over component functionality
+        * Smaller processes
+        * Reusable across multiple components
+        * Conditional Functionalty (classes / styling)
+        * Functionality based off inputs
+        * NOT when It's component specific
+        * NOT when you need secure functionality
+        * NOT for something that can be done with a series of existing directives
 
 * APIs
     * Setting up an API
@@ -183,11 +253,13 @@
     * Data Binding
     * Parent/Child Communication
     * Service Based Communication
+
 * Styling and Angular MD
     * SCSS
     * Table Setup
     * Angular Setup
     * Custom Themes
+
 * Routing and AuthGuards
     * Routing in Applications
     * AuthGuards
@@ -196,31 +268,36 @@
 * Database Structure
     * Database Design
     * Best Practices
+
 * Authentication / Passport
     * When to use what
     * Best Practices
+
 * Express and Server Setup
     * Overall Structure
     * Best Practices
 
 * IFTTT
+
 * General Node and CLI Package Review
     * Different CLI Commands
     * Node Review
 
 * General JavaScript Review
     * This
-    * Then
     * Hoisting and Inheritance
     * ES6
+
 * General Jr. Dev Requirements and Keeping up to Date with Web Dev topics, Contract Work
     * Key things to work on
     * Keeping your skills fresh
     * Contract Work
+
 * Best Practice Reviews
     * Generic Overview
     * Specific Q&A
 * Work Prioritizaion / Compartmentalization
+
     * Order of Work
     * How to compartmentalize tons of work 
 
