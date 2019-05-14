@@ -1,6 +1,6 @@
 # Review Topics
 
-* Observables, Promises and Callbacks
+* Observables, Promises, and Callbacks
     * Promise Chaining
     * Callbacks / Async Await
     * Best Practices
