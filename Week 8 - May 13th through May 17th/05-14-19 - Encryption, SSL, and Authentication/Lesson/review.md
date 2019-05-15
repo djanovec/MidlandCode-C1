@@ -500,11 +500,104 @@ export interface User {
 
 
 # General JavaScript Review
-## This
-## Hoisting and Inheritance
+* Arrow Functions provide syntactical sugar for functions.
+    ``` javascript
+        // SINGLE LINE WITH ONLY A RETURN
+        // Non arrow function
+        function randomNumber(min, range){
+            return Math.floor(Math.random() * range) + min;
+        }
+        //Arrow funciton
+        let randomNumber = (min, range) =>  Math.floor(Math.random() * range) + min;
+        // MULTI LINE
+        function randomNumber(min, max){
+            let range = max-min;
+            return Math.floor(Math.random() * range) + min;
+        }
+
+        let randomNumber = (min, max) => {
+            let range = max-min;
+            Math.floor(Math.random() * range) + min;
+        }
+        //With only one param AND one line as a return
+        param => param+2;
+
+        //Anonymous function
+        let arr = [1,2,3,4,5]
+        //Non Arrow
+        let lessThan4 = arr.filter(function(val){
+            return val < 4;
+        })
+        //Arrow
+        let lessThan4 = arr.filter(val => val < 4);
+    ```
+* Higher order functions - Functions that take functions as arguments.
+* Closures - Functions that return functions that allow for separation of scope.
+    ``` javascript
+        function multiplier(a){
+            let timesCalled = 0;
+            return function(b){
+                timesCalled++;
+                console.log(`TimesCalled with multiplier ${a}: ${timesCalled}`);
+                console.log("Result: ",a*b);
+            }
+        }
+        const timesTwo = multiplier(2);
+        const timesThree = multiplier(3);
+        // Without Closures
+        let timesCalledTwo = 0;
+        function timesTwo(b){
+            timesCalledTwo++;
+            console.log(`TimesCalled with multiplier 2: ${timesCalledTwo}`);
+            console.log("Result: ",2*b);
+        }
+        let timesCalledThree = 0;
+        function timesThree(b){
+            timesCalledThree++;
+            console.log(`TimesCalled with multiplier 3: ${timesCalledThree}`);
+            console.log("Result: ",3*b);
+        }
+    ```
+* This - The scope where the thing you're referring to `this` lives inside of.
+    ``` javascript
+    let obj = {
+        age: 30,
+        maxAge: 40,
+        yearsUntilMax: () => this.maxAge - this.age; //'this' refers to the object it lives inside of.
+        }
+    }
+    this.age // here means nothing
+    obj.age // only way to access outside of the object.
+    ```
+* Hoisting - Moving var and functions declarations to the top of the scope before code is executed. Does not hoist initializations.
+    ``` javascript
+        let x; // Hoisted regardless of where in file
+        let y = 10; // NOT hoisted
+    ```
+* Inheritance - In let's say an `array` ALL arrays have access to ALL prototypical functions of arrays like `.join`, `.forEach`, etc. You can if you want to actually create NEW prototypical functions and then ALL elements of that type will inherit that new function.
+    ``` javascript
+            Array.prototype.mikesName = "Mike"
+        }
+    ```
 ## ES6
+* All things added: [New in ES6](http://es6-features.org/#Constants)
+* Importing/exporting
+    ``` javascript
+        //ES5
+        module.exports = function randomNum(a,b){
+            return Math.floor(Math.random()* b)+a
+        }
+        let random = require('../randomNum')
 
-
+        //ES6
+        export randomNum(a,b){
+             return Math.floor(Math.random()* b)+a
+        }
+        import {randomNum} from '../randomNum'
+    ```
+* Classes were added in ES6 where before you had to use objects only.
+* Arrow Functions added in ES6
+* `async` `await` added in ES6
 
 # General Jr. Dev Requirements and Keeping up to Date with Web Dev topics, Contract Work
 ## Key things to work on / Jr Dev Foci
