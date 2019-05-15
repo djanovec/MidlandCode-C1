@@ -363,7 +363,37 @@
     * ES6
 
 * General Jr. Dev Requirements and Keeping up to Date with Web Dev topics, Contract Work
-    * Key things to work on
+    * Key things to work on / Jr Dev Foci
+        * Solid working portfolio projects
+            * Showcase your skills
+            * Be prepared to discuss problems/solutions
+            * Talk about why you chose the techs you did
+            * Talk about / be prepared to talk about order of attack
+        * Prepping for the Interview [Manager Tools](www.manager-tools.com)
+            * Brush up on interview topics
+            * Study techs you'll be using 
+            * Study the company itself AND interview panel
+            * Tailor your resume to the job you're applying to (or just have a solid resume)
+            * Bring notepad and take notes
+            * Be prepared to talk in depth about anything on your resume / GitHub
+            * ASK QUESTIONS OF THE PANEL
+                * Ask for clarification on questions they ask.
+                * As a junior developer what kind of feedback can I be expecting in your company?
+                * How do I know that I've put in a good day's work?
+                * How do you enjoy working here and what makes you excited about coming into work?
+                * What's the biggest problem the company is going to be facing in the next year?
+            * Prep for where to park/ what to wear / who to talk to and test the route
+            * Don't be afraid to make jokes / make them laugh
+            * If you didn't get the job, ask why.
+            * Hardest Questions:
+                * So the interview is over and I call you tomorrow saying you didn't get the job. Why didn't I give it to you?
+                * What's the thing that you built that you're most proud of?
+                * Hypothetical questions that force critical thinking / thought process.
+                * What's the most unique solution you've come up with for a problem?
+                * Describe a situation you've had a hard time finding a solution and how you worked through it.
+                * What does it look like when you're stressed?
+            * Ask for business cards and send thank you cards. 
+        * 
     * Keeping your skills fresh
     * Contract Work
 
