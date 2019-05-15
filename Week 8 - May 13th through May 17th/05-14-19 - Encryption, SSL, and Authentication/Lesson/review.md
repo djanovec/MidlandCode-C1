@@ -348,7 +348,6 @@ ngOnInit() {
 * If all data is being sent and an error is happening / no data returned, log out the error in the `pool.query` (in the above example): `console.log(err)`
 
 
-
 # Angular General Review and Communication
 ## Object Interfaces
 ``` typescript
@@ -379,9 +378,93 @@ export interface User {
 
 
 # Routing and AuthGuards
-## Routing in Applications
+## Routing in Angular
+* Angular CLI allows for a routing file to be generated as part of `ng new`
+    ``` typescript
+    import { NgModule } from '@angular/core';
+    import { Routes, RouterModule } from '@angular/router';
+
+    const routes: Routes = [];
+
+    @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+    })
+    export class AppRoutingModule { }
+    ```
+* Your routes array is where all of your routes go.
+* Routes are arrays that contain any information about the route and what it needs to do
+    ``` typescript
+    {path: 'home', component: HomeComponent}
+    ```
+* Options for Routes in the object
+    * `path` - The path where the route will be triggered `home` or `home/jobs` never starts with a `/`. Paths that include `:` followed by a variable name are paths that can be used to pull out the variable name and any value will work for that route. `user/:id` will work with `user/ANYTHING` and the part after the `user/` can be pulled out in a component or resolver. `**` for the path will be ANY path not otherwise declared in the route array. This will always be the last route declared.
+    * `pathMatch` - options for this are `prefix` or `full`. `full` allows for paths like `team/:id` and `team/11/user` to both work
+    * `component` - the component that will load on that given route.
+    * `redirectTo` - allows to redirectTo a declared path instead of loading a component. Can be any valid path.
+    * `canActivate`, `canLoad` - takes an array of AuthGuards that fire on those specific route guards. 
+    * `data` - allows for the passing of data as part of a route. Not really used in most cases. Equivalent of using a param as described above but not show it in the browser's url.
+    * `resolve` - Fires off a resolver when loading the route.
 ## AuthGuards
+* Can be used to restrict access to specific routes. Can be generated via the angular CLI `ng g g nameOfGuard`
+* Takes advantage of one of the built in functions such as `canActivate` (used in like 90% of all AuthGuard cases)
+* Expects a boolean or Promise boolean or Observable boolean to be returned. True means they CAN access the route, false means they CANNOT
+    ```typescript
+    import { Injectable } from '@angular/core';
+    import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
+    import { Observable } from 'rxjs';
+    import { Router } from '@angular/router';
+    import { UserService } from '../services/user.service' //Pretend that this exists
+
+    @Injectable({
+    providedIn: 'root'
+    })
+    export class UserGuard implements CanActivate {
+    constructor(private userService : UserService, private router: Router){}
+        canActivate(
+            next: ActivatedRouteSnapshot,
+            state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+            if(this.userService.isLoggedIn){ //isLoggedIn would be something we'd make on the user service
+                return true;
+            }
+            this.router.navigate(['/login']);
+            return false;
+        }
+    }
+    // IN THE ROUTE FILE
+    {path: 'user', component: UserComponent, canActivate: [UserGuard]}
+    ```
+
+## Resolvers
+* Allows for some funcitonality to occur before the route actually loads.
+* Will hang up the route and cause a potential infinite delay if it never ends / has no return value
+* Example: 
+    ``` typescript
+        import{Injectable} from '@angular/core';
+        import {Resolve, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
+        import {Observable} from 'rxjs/Observable';
+
+        @Injectable({
+            providedIn: 'root'
+        })
+        export class AppResolver implements Resolve<any>{
+            constructor(){
+            }
+            resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) : Observable<any>{
+                console.log('Router resolver has been triggered');
+                return SomeObservable
+            }
+        }
+        // In the routes array
+        const routes: Routes = [{path: '', component: HomeComponent, resolve: {appResolver: AppResolver}}]
+    ```
+
 ## Best Practices
+* For AuthGuards redirect them to an appropriate path if they can't active. Redirect to `login` if they try to access a user only route.
+* Use clear semantic routes. `/home` in lieu of `/websitehome`
+* Redirect to top level (or show a 404 component) for all undeclared routes.
+* Take advantage of AuthGuards.
+* Be careful about what params you use and why you use them.
 
 
 
