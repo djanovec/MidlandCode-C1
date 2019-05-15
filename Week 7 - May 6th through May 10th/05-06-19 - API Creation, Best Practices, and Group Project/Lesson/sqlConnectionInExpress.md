@@ -9,7 +9,8 @@
 * To set up a single use connection you can simnply use the following code: 
     ``` javascript
         var mysql = require('mysql')
-        var connection = mysql.createConnection({
+         var pool = mysql.createPool({
+        connectionLimit: 10,
         host     : 'localhost',
         user     : 'example_user',
         password : 'password',
