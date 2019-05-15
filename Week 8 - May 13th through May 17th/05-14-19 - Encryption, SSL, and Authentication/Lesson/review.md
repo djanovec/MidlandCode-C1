@@ -382,6 +382,7 @@
                 * How do I know that I've put in a good day's work?
                 * How do you enjoy working here and what makes you excited about coming into work?
                 * What's the biggest problem the company is going to be facing in the next year?
+                * How fast can a change that fixes a typo on the website get out into production?
             * Prep for where to park/ what to wear / who to talk to and test the route
             * Don't be afraid to make jokes / make them laugh
             * If you didn't get the job, ask why.
@@ -393,9 +394,20 @@
                 * Describe a situation you've had a hard time finding a solution and how you worked through it.
                 * What does it look like when you're stressed?
             * Ask for business cards and send thank you cards. 
-        * 
+        * Get paid your worth and don't take stock in lieu of money. 
+        * Be wary of companies that say they have an `awesome startup feel`.
     * Keeping your skills fresh
+        * Listen to podcasts
+        * Follow popular programmers on Twitter.
+        * Teach yourself via documentation and Stack Overflow.
+        * Work on personal projects that challenge you either in new techs or ones you know. 
+        * Attend meetups and learning groups.
+        * Don't get caught up in hype of the new hotness.
+        * Always have a side hustle.
     * Contract Work
+        * Overestimate time needed - (My expected time) + 10% + Time for at least 3 iterations.
+        * Protect yourself at all costs. - Errors and Omissions Insurance
+        * Keep track of actual hours worked.
 
 * Best Practice Reviews
     * Generic Overview
@@ -403,6 +415,10 @@
 
 * Work Prioritizaion / Compartmentalization
     * Order of Work
+        * Research what you have to do and what techs you need.
+        * Break out dependencies. And then work forwards from least dependent.
+        * Know the scope and requirements of the project / end user.
     * How to compartmentalize tons of work 
+        * 
 
 * Unit Testing
