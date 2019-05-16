@@ -797,6 +797,24 @@ If you want to use a MySQL database, go to the Resoures Tab and search for [`Cle
 
     app.listen(3000);
     ```
+* To send an Angular app or static files
+    ``` javascript
+    const express = require('express');
+    const PORT = process.env.PORT || 8080;
+    const app = express();
+
+    app.use(express.static(__dirname+"/dist"))
+
+    app.get("/", (req, res)=>{
+        // Relative path of the index.html file
+        res.sendFile(__dirname+"/dist/index.html")
+    })
+
+    app.get("/*", (req,res)=>{
+        res.redirect('back')
+    })
+    app.listen(PORT);
+    ```
 * [Express Docs](https://expressjs.com/)
 ## Port Use
 * When deploying always use `process.env.PORT || YOURDEFAULTPORT`
