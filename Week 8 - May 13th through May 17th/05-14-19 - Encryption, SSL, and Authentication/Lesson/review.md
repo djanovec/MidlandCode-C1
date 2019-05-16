@@ -1,7 +1,16 @@
-# Review Topics
+| [ANGULAR TOPICS](#angular)                                  	| [BACKEND TOPICS](#backend-topics)                  	| [GENERAL TOPICS](#general-topics)                                  	|
+|------------------------------------------	|---------------------------------	|----------------------------------------------	|
+| [Angular Review and Communication](#angular-review-and-communication)         	| [APIs](#apis)                             	| [General Best Practices](#general-best-practices)                               	|
+| [Directives](#directives)                               	| [Authentication and Passport](#authentication-and-passport)     	| [JavaScript Review](#javascript-review)                            	|
+| [Form Validation](#form-validation)                          	| [Database Structure](#database-structure)              	| [Node and CLI Package Review](#node-and-cli-package-review)                  	|
+| [Observables and Asynchronous Programming](#observables-and-asynchronous-programming) 	| [Deployment Issues and Questions](#deployment-issues-and-questions) 	| [Employment Preparation](#employment-preparation)                       	|
+| [Routing AuthGuards and Resolvers](#routing-authguards-and-resolvers)         	| [Express and Server Setup](#express-and-server-setup)        	| [GitHub and Git](#github-and-git)                               	|
+| [Styling and Angular Material Design](#styling-and-angular-material-design)      	|                                 	| [Work Prioritization and Compartmentalization](#work-prioritization-and-compartmentalization) 	|
+| [Unit Testing](#unit-testing)                             	|                                 	|                                              	|
 
+# ANGULAR TOPICS
 
-# Angular General Review and Communication
+# Angular Review and Communication
 * [Angular CLI Commands](https://angular.io/cli)
 ## Object Interfaces
 ``` typescript
@@ -273,7 +282,7 @@ ngOnInit() {
 * Validate all possible requirements
 * Keep the form from submitting (and ideally disable the button) until the form is valid
 
-# Observables, Promises, and Callbacks
+# Observables And Asynchronous Programming
 ## Differences
 * Promises Happen once and then done
     ``` javascript
@@ -331,7 +340,7 @@ getRes(){
 * Make sure you're handling any potential errors from the Observable Stream or in the Promise chain
 
 
-# Routing and AuthGuards
+# Routing AuthGuards and Resolvers
 ## Routing in Angular
 * Angular CLI allows for a routing file to be generated as part of `ng new`
     ``` typescript
@@ -421,7 +430,7 @@ getRes(){
 * Be careful about what params you use and why you use them.
 
 
-# Styling and Angular MD
+# Styling and Angular Material Design
 * Always use separate `scss` files per component
 * If you need to have universal styling use the `styles.scss`AVOID THIS IF YOU CAN
 ## SCSS
@@ -515,8 +524,50 @@ getRes(){
 * For easier use, use [this site](http://mcg.mbitson.com/)
 
 # Unit Testing
+* There are a couple good libraries out there for testing applications. The most used are `karma`/`jasmine` with Angular or [`mocha`](https://mochajs.org/) with most things js.
+* E2E usally done by QA while a lot of programmers are in charge of their own unit tests.
+* TDD (Test Driven Development) requires tests to written first and then code to be written to pass the tests.
+* With Unit testing in Angular example:
+    ``` javascript
+    it(`should have as title 'sampleAngularApp'`, () => {
+        // Fixture is creating the component itself
+        const fixture = TestBed.createComponent(AppComponent);
+        // Creates the component in a testing environment
+        const app = fixture.debugElement.componentInstance;
+        // Checking to see if the title key on the app equals a specific value
+        expect(app.title).toEqual('sampleAngularApp');
+    });
+    ```
+* Testing services in Angular:
+    ``` typescript
+    // Creates a psuedo version of a Service
+    describe('ValueService', () => {
+        let service: ValueService;
+        // beforeEach() requires functionality before each test
+        beforeEach(() => { service = new ValueService(); });
+        // This is calling the getVaulue function on the service expects a real value
+        it('#getValue should return real value', () => {
+            expect(service.getValue()).toBe('real value');
+        });
+    }
+    ```
+## Best Practices
+* Ideally you test LARGE app breaking funcitonality. Don't go overboard with testing:
+    ``` javascript
+        // Does NOT need a test
+        if(booleanVar){
+            console.log(true)
+        }
+        else{
+            console.log(false)
+        }
+    ```
+* Make sure you know what the requirements are of your organization regarding testing.
+* If contributing to open source projects OR creating a node_module that you expect others to use you'll need to test it.
+* If you want to launch a site on your own to showcase your work (to be used for actual revenue generation) test the hell out of it.
 
 
+# BACKEND TOPICS
 
 # APIs
 ## Setting up an API
@@ -632,7 +683,7 @@ getRes(){
 
 
 
-# Authentication / Passport
+# Authentication and Passport
 * Used to protect routes based off need.
 * Can be used with sessions or via JWT tokens.
 * OAuth / OAuth 2.0 Allows you to leverage other servers for SSO and authentication instead of using your own resources.
@@ -712,7 +763,7 @@ getRes(){
 * Ensure that cookies are being saved OR JWT token is being sent with all requests to a protected route.
 
 
-# Database Structure Best Practices
+# Database Structure
 * Can be done via SQL interface as well as raw SQL via some form of connection.
 * Separate out information as much as possible.
 * Keep in mind if you have too much informaton in a table.
@@ -733,8 +784,6 @@ If you want to use a MySQL database, go to the Resoures Tab and search for [`Cle
 * Set your start script in `package.json` to `node server` (where server is your servers file name)`
 * Push everything to github
 * Deploy via github.
-
-
 
 # Express and Server Setup
 * Basic Boilerpate Server:
@@ -830,7 +879,10 @@ If you want to use a MySQL database, go to the Resoures Tab and search for [`Cle
 * Follow semantic naming conventions for your routes. `/users/add` or `/users/all` as opposed to `/addUsers` or `/getAllUsers`
 * Take advantge of ALL http verb `router.get`, `router.post`, `router.put`, `router.delete`
 
-# Best Practice Reviews
+
+# GENERAL TOPICS
+
+# General Best Practices
 * Ensure you have appropriate names for variables and functions.
 * Use types in typescript whenever possible.
 * Comment your code as if you will never touch it again and someone else will. 
@@ -1002,7 +1054,7 @@ If you want to use a MySQL database, go to the Resoures Tab and search for [`Cle
 * `cron`        - Allows for cron jobs on a server (recurring functionality)
 
 
-# Junior Dev Requirements and Keeping up to Date with Web Dev topics, Contract Work
+# Employment Preparation
 ## Key things to work on / Jr Dev Foci
 * Solid working portfolio projects
     * Showcase your skills
@@ -1049,7 +1101,7 @@ If you want to use a MySQL database, go to the Resoures Tab and search for [`Cle
 * Protect yourself at all costs. - Errors and Omissions Insurance
 * Keep track of actual hours worked.
 
-# GitHub / Git
+# GitHub and Git
 * Git via the CLI [Cheatsheet](https://gist.github.com/davfre/8313299).
 * Github is the de facto git repository storage site online but there are others like BitBucket.
 * Can be used only locally without remote storage but partially defeats the purpose of git.
@@ -1060,9 +1112,15 @@ If you want to use a MySQL database, go to the Resoures Tab and search for [`Cle
     * When you're happy with the changes, you'll make a pull request and list reasons why it should be included in the orginal repo.
     * The maintainer of that repo will then review the code and it's differences from the original and either deny or allow the request. If it's allowed it will then be included in the orginal repo (or master if it's a different branch).
 * Cloning a repo clones all of the code but removes the link from your original repo creating a brand new one that you control.
-* 
+* Setting up your user info:
+    ``` js
+    git config --global user.name "YOUR_USERNAME"
+    git config --global user.name
+    git config --global user.email "your_email_address@example.com"
+    git config --global user.email
+    ```
 
-# Work Prioritizaion / Compartmentalization
+# Work Prioritization and Compartmentalization
 ## Order of Work
 * Research what you have to do and what techs you need.
 * Break out dependencies. And then work forwards from least dependent.
