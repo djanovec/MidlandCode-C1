@@ -633,16 +633,90 @@ getRes(){
 
 
 # Authentication / Passport
+* Used to protect routes based off need.
+* Can be used with sessions or via JWT tokens.
+* OAuth / OAuth 2.0 Allows you to leverage other servers for SSO and authentication instead of using your own resources.
 ## When to use what
-## Best Practices
+* JWT Authorization
+    * Stateless
+    * Requires the token to be sent to the server with each new request.
+    * Allows more complex data to be stored in the JWT
+    * Cannot keep track of users habits on a site easily.
+    * Can be used on multiple devices.
+    * Allows for a seperate server to handle authentication.
+*  Session Based Authorization with Cookies
+    * Persistent with the use of cookies.
+    * Sessions can be stored in databases.
+    * Reduces server memory impact.
+    * Since sessions are stored they can be used to push info to all users.
+    * Cannot be used on multiple devices outside of computers / normal web browsers.
+## Passport
+* [Library](http://www.passportjs.org/) to allow for easier setup / use of authentication.
+* Allows for the use of SSO thorugh multiple sites, JWT, or session based authentication.
+* Set up as a middle ware that can be attached to specific routes OR can be used IN routes themselves.
+* Configuration should be done in a separate file and then import the setup into the main `server.js` file.
+* Example:
+    ``` javascript
+    // Imports the passport library
+    var passport = require('passport') 
+    // Imports Strategy (how we will authenticate) can also be a strategy using Google/Twitter/Facebook/Etc.
+    , LocalStrategy = require('passport-local').Strategy; 
 
+    // Tells passport to use a local strategy
+    passport.use(new LocalStrategy(             
+    // Creates the actual strategy. Done is a keyword that tells that passport uses to exit the strategy
+    function(username, password, done) {
+        //Query to ull out the user
+        pool.query("SELECT * FROM USERS WHERE USERNAME = ?",[username], function (err, user) {
+        // Done can take up to three arguments done(ERROR, THEUSERFOUND, MESSAGE)
+        // If no user is present in DONE, the authentication will fail.
+        if (err) { return done(err); }
+        if (!user[0]) {
+            //     done(No Error, No User, Message)
+            return done(null,     false,  { message: 'Incorrect username.' });
+        }
+        if (!user.validPassword(password)) {
+            //     done(No Error, No User, Message)
+            return done(null, false, { message: 'Incorrect password.' });
+        }
+        //     done(No Error, Authenticated User)
+        return done(null, user[0]);
+        });
+    }
+    ));
+    ```
+    * In route use:
+    ``` javascript
+    router.get('/login', function(req, res, next) {
+        // err, user, info will be sent back as part of done() from above strategy
+        passport.authenticate('local', function(err, user, info) {
+            if (err) { 
+                return next(err); 
+            }
+            if (!user) { 
+                return res.redirect('/login'); 
+            }
+            req.logIn(user, function(err) {
+            if (err) { 
+                return next(err); 
+            }
+            return res.redirect('/users/' + user.username);
+            });
+        })(req, res, next);
+    });
+    ```
+## Best Practices
+* Make sure you comment your authentication strategies. 
+* Protect different routes with an appropriate strategy.
+* Only protect the routes that need to be otherwise you can run into major issues.
+* Ensure that cookies are being saved OR JWT token is being sent with all requests to a protected route.
 
 
 # Database Structure Best Practices
-* Can be done via SQL interface as well as raw SQL via some form of connection
-* Separate out information as much as possible
-* Keep in mind if you have too much informaton in a table
-* Take advantage of joining tables whenever possible
+* Can be done via SQL interface as well as raw SQL via some form of connection.
+* Separate out information as much as possible.
+* Keep in mind if you have too much informaton in a table.
+* Take advantage of joining tables whenever possible.
 * Think about how hard it'd be to update information in the future.
 * Take a look at repeating information in the tables.
 
@@ -976,6 +1050,17 @@ If you want to use a MySQL database, go to the Resoures Tab and search for [`Cle
 * Keep track of actual hours worked.
 
 # GitHub / Git
+* Git via the CLI [Cheatsheet](https://gist.github.com/davfre/8313299).
+* Github is the de facto git repository storage site online but there are others like BitBucket.
+* Can be used only locally without remote storage but partially defeats the purpose of git.
+* Forking can be done to allow you to take a project at that moment in time and work on extra functionality / changes without impacting the original repo.
+* Pull Requests:
+    * Used if you want to fix a bug in a repository that is open source (or if push to master is protected).
+    * You'll either fork (or if you're in the organization you'll create a new branch).
+    * When you're happy with the changes, you'll make a pull request and list reasons why it should be included in the orginal repo.
+    * The maintainer of that repo will then review the code and it's differences from the original and either deny or allow the request. If it's allowed it will then be included in the orginal repo (or master if it's a different branch).
+* Cloning a repo clones all of the code but removes the link from your original repo creating a brand new one that you control.
+* 
 
 # Work Prioritizaion / Compartmentalization
 ## Order of Work
